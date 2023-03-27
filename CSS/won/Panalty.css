@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+/* 전체 틀 */
+section#Field-box {
+
+    width: 65%;
+    height: 400px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+div.container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+
+/* 공 + spot 묶음 박스 */
+section#Field-box div.ball-spot-direction-box {
+    background: rgb(72, 183, 72);
+    width: 100%;
+    height: 100%;
+    margin-top: 300px;
+
+
+    float: left;
+    position: relative;
+}
+
+/* 공 */
+section#Field-box div.container div#Ball {
+    background-image: url('../pic/Ball.png');
+    background-size: 100%;
+    border-radius: 50%;
+
+    width: 70px;
+    height: 70px;
+
+    position: relative;
+    bottom: -31%;
+    left: 47%;
+
+    z-index: 1000;
+}
+
+/* spot */
+section#Field-box div.container div#Spot img {
+    border-radius: 50%;
+    border: 2px dotted lightgray;
+    box-shadow: 0 10px 15px;
+
+    width: 60px;
+    height: 20px;
+
+    position: absolute;
+    bottom: 50%;
+    left: 47.5%;
+}
+
+/* 방향 관련 묶음 박스 */
+section#Field-box div.container div.ball-spot-direction-box div.direction {
+    width: 20%;
+    height: 10%;
+
+    position: absolute;
+    bottom: 30%;
+    left: 41%;
+
+    display: flex;
+    padding: 0 20px;
+    /* background: yellow; */
+}
+
+/* 방향 입력창 + 입력 표시 묶음 박스 */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 방향 입력 text */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text {
+    width: 100%;
+}
+
+/* 방향 입력 버튼 */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text-Btn-box button#Shooting {
+    background: ivory;
+    border: 1px solid black;
+    border-radius: 50%;
+    line-height: 1.5;
+    cursor: pointer;
+    animation: jumping 0.8s infinite alternate;
+}
+
+/* 방향 입력 버튼 hover */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text-Btn-box button#Shooting:hover {
+    animation: fadeOut 0.6s infinite;
+
+}
+
+/* 방향 입력 버튼 hover시 효과 */
+@keyframes fadeOut {
+    0% {
+        background: ivory;
+        border: 1px solid black;
+    }
+
+    50% {
+        background: black;
+        border: 2px solid ivory;
+    }
+
+    100% {
+        background: ivory;
+        border: 1px solid black;
+    }
+}
+
+/* 위아래 반복 이동 효과 */
+@keyframes jumping {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 방향 입력 버튼 사진 */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text-Btn-box button#Shooting img {
+    width: 12px;
+    border-radius: 50%;
+
+    position: relative;
+    top: 1.5px;
+}
+
+/* 방향 입력 표시 묶음 박스 */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box {
+    display: flex;
+}
+
+/* 방향 입력 표시 */
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box p {
+    width: 100%;
+
+    font-size: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    box-shadow: 1px 1px 3px;
+
+    animation: boxJumping 2s infinite alternate;
+}
+
+@keyframes boxJumping {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Player 묶음 박스 */
+section#Outer div.player-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 23%;
+    top: 520px;
+
+    z-index: 9999;
+}
+
+/* Player */
+section#Outer div#Player {
+    width: 100px;
+    height: 100px;
+
+    background-image: url('../pic/God.png');
+    background-size: 100%;
+
+    border-radius: 50%;
+    border: 7px solid blue;
+    color: black;
+
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2.5;
+
+    box-shadow: 0 10px 15px;
+
+    animation: playerJumping 0.5s infinite alternate;
+}
+
+/* Player 동작 효과 */
+@keyframes playerJumping {
+    0% {
+        transform: translateY(0);
+        height: 90px;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        height: 100px;
+    }
+}
+
+
+
+section#Outer div#Player::before {
+    content: '11';
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: blue;
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.7em;
+
+    position: relative;
+
+    display: none;
+}
+
+section#Outer div#Player:hover::before {
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================================== GoalPost */
+
+section#GoalPost-box {
+    width: 100%;
+    height: 100px;
+}
+
+section#GoalPost-box .box {
+    border: 20px solid black;
+    border-bottom: 1px solid rgb(72, 183, 72);
+
+    width: 65%;
+    height: 400px;
+    margin: 0 auto;
+}
