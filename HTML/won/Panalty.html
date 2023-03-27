@@ -17,7 +17,9 @@
     <section id="Outer">
 
         <section id="GoalPost-box">
-            <div class="box"></div>
+            <div class="goalPost">
+                <div class="box"></div>
+            </div>
         </section>
 
         <!--  -->
@@ -32,7 +34,7 @@
                     <div class="ball" id="Ball"></div>
 
                     <!-- spot -->
-                    <div class="ballSpot" id="Spot"><img src="pic/BallSpot.png" alt="스팟"></div>
+                    <div class="ballSpot" id="Spot"><img src="../../CSS/won/pic/BallSpot.png" alt="스팟"></div>
 
                     <!-- 방향 관련 묶음 박스 -->
                     <div class="direction">
@@ -40,33 +42,22 @@
                         <!-- 방향 입력창 + 입력 표시 묶음 박스  -->
                         <div class="direction-box">
 
-                            <!-- 방향 입력창 + 입력 버튼 묶음 박스 -->
-                            <div class="text-Btn-box">
-
-                                <!-- 방향 입력 text -->
-                                <input type="text" id="Text" placeholder="숫자 입력 후, Enter / 클릭 >>" autofocus>
-                                <!-- 입력 버튼 -->
-                                <span><button type="button" id="Shooting"><img src="pic/Ball.png"
-                                            alt="슈팅"></button></span>
-
-                            </div> <!-- end text-Btn-box -->
-
                             <!-- 방향 입력 표시 묶음 박스 -->
                             <nav class="inputDirection-box">
 
                                 <!-- 방향 입력 표시 -->
                                 <!-- 왼쪽 -->
-                                <p class="selectDirection" id="Left">◀ : 1</p>
+                                <button class="selectDirection" id="Left">◀ : 1</button>
                                 <!-- 중앙 -->
-                                <p class="selectDirection" id="Center">▲ : 2</p>
+                                <button class="selectDirection" id="Center">▲ : 2</button>
                                 <!-- 오른쪽 -->
-                                <p class="selectDirection" id="Right">▶ : 3</p>
+                                <button class="selectDirection" id="Right">▶ : 3</button>
 
                             </nav> <!-- end inputDirection-box -->
 
                         </div> <!-- end diretion-box -->
 
-                    </div> <!-- end direction -->
+                    </div> end direction
 
                 </div> <!-- end ball-spot-direction-box -->
 
