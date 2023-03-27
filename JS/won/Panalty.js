@@ -6,6 +6,18 @@ const $player = document.getElementById('Player'); // Player
 
 // ============================================================================================= 호출부
 // ============================================================================================= 호출부(함수)
+function afterShooting(){ // 슈팅을 찬 이후에
+    $player.style.animation = 'playerJumping 0.5s infinite alternate'; // 애니메이션 재시작
+    $player.style.scale = null; // 줄어든 크기 다시 복구
+    $ball.style.scale = null; // 줄어든 크기 다시 복구
+    
+}
+
+function resetTextBox(){ // 슈팅 동작 후 text 박스 초기화
+    $textBox.value = ''; // text박스안의 입력값 초기화
+    $textBox.focus; // text박스
+}
+
 function shootingAnimation() { // 슈팅 작동 함수
     $ball.style.transition = '0.5s'; // 움직이는 속도
     $ball.style.scale = '0.8 0.8'; // 움직일 때 크기 변화
@@ -58,8 +70,7 @@ function shootingDirection() {
         
     } else { // 1, 2, 3을 제외한 다른 값 입력 시
         alert('다시 입력하세요!! [ 1, 2, 3 ]'); // 경고메세지 출력
-        $textBox.value = ''; // text박스안의 입력값 초기화
-        $textBox.focus; // text박스
+        resetTextBox();
     }
     
 }
@@ -74,6 +85,8 @@ function reset(){ // 슈팅 후 위치 초기화 함수
     $ball.style.transition = null; // 움직이는 방향
     $ball.style.translate = '0 0'; // 움직이는 방향
     
+    setTimeout(reStartAnimation, 1000);
+
 }
 
 function shooting() { // 함수가 호출됬을 때
@@ -81,6 +94,8 @@ function shooting() { // 함수가 호출됬을 때
     shootingDirection();
 
     setTimeout(reset, 2500);
+    setTimeout(resetTextBox, 2500);
+    setTimeout(afterShooting, 2500);
 
 }
 
@@ -94,7 +109,7 @@ $textBox.onkeyup = e => {
     if (e.key === 'Enter') {
         shooting();
     } 
-    
+
 }
 
 

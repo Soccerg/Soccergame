@@ -6,6 +6,10 @@ body {
     width: 100%;
 }
 
+section#Outer {
+    position: relative;
+}
+
 /* 전체 틀 */
 section#Field-box {
 
@@ -26,7 +30,8 @@ div.container {
 
 /* 공 + spot 묶음 박스 */
 section#Field-box div.ball-spot-direction-box {
-    background: rgb(72, 183, 72);
+    background;
+
     width: 100%;
     height: 100%;
     margin-top: 300px;
@@ -38,7 +43,7 @@ section#Field-box div.ball-spot-direction-box {
 
 /* 공 */
 section#Field-box div.container div#Ball {
-    background-image: url('../pic/Ball.png');
+    background-image: url('../../HTML/won/pic/Ball.png');
     background-size: 100%;
     border-radius: 50%;
 
@@ -197,7 +202,7 @@ section#Outer div#Player {
     width: 100px;
     height: 100px;
 
-    background-image: url('../pic/God.png');
+    background-image: url('../../HTML/won/pic/God.png');
     background-size: 100%;
 
     border-radius: 50%;
@@ -227,8 +232,7 @@ section#Outer div#Player {
     }
 }
 
-
-
+/* Player 등번호 */
 section#Outer div#Player::before {
     content: '11';
     color: white;
@@ -248,10 +252,12 @@ section#Outer div#Player::before {
     display: none;
 }
 
+/* Player 등번호 hover 효과 */
 section#Outer div#Player:hover::before {
     display: inline-block;
 
 }
+
 
 
 
