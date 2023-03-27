@@ -1,9 +1,14 @@
+@import url('../common.css');
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     width: 100%;
+    height: 100%;
 }
 
 section#Outer {
@@ -13,8 +18,8 @@ section#Outer {
 /* 전체 틀 */
 section#Field-box {
 
-    width: 65%;
-    height: 400px;
+    width: 100%;
+    height: 600px;
     margin: 0 auto;
 
     position: relative;
@@ -30,12 +35,10 @@ div.container {
 
 /* 공 + spot 묶음 박스 */
 section#Field-box div.ball-spot-direction-box {
-    background;
-
+    background-image: url('../won/pic/grass.png');
+    
     width: 100%;
     height: 100%;
-    margin-top: 300px;
-
 
     float: left;
     position: relative;
@@ -43,7 +46,7 @@ section#Field-box div.ball-spot-direction-box {
 
 /* 공 */
 section#Field-box div.container div#Ball {
-    background-image: url('../../HTML/won/pic/Ball.png');
+    background-image: url('../../CSS/won/pic/Ball.png');
     background-size: 100%;
     border-radius: 50%;
 
@@ -51,8 +54,8 @@ section#Field-box div.container div#Ball {
     height: 70px;
 
     position: relative;
-    bottom: -31%;
-    left: 47%;
+    bottom: -30%;
+    left: 49.25%;
 
     z-index: 1000;
 }
@@ -67,22 +70,18 @@ section#Field-box div.container div#Spot img {
     height: 20px;
 
     position: absolute;
-    bottom: 50%;
-    left: 47.5%;
+    bottom: 57%;
+    left: 49.5%;
 }
 
 /* 방향 관련 묶음 박스 */
 section#Field-box div.container div.ball-spot-direction-box div.direction {
-    width: 20%;
-    height: 10%;
-
+    width: 30%;
+    height: 20%;
+    
     position: absolute;
-    bottom: 30%;
-    left: 41%;
-
-    display: flex;
-    padding: 0 20px;
-    /* background: yellow; */
+    bottom: 10%;
+    left: 36%;
 }
 
 /* 방향 입력창 + 입력 표시 묶음 박스 */
@@ -91,28 +90,7 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
     margin: 0 auto;
 }
 
-/* 방향 입력 text */
-section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text {
-    width: 100%;
-}
-
-/* 방향 입력 버튼 */
-section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text-Btn-box button#Shooting {
-    background: ivory;
-    border: 1px solid black;
-    border-radius: 50%;
-    line-height: 1.5;
-    cursor: pointer;
-    animation: jumping 0.8s infinite alternate;
-}
-
-/* 방향 입력 버튼 hover */
-section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box .text-Btn-box button#Shooting:hover {
-    animation: fadeOut 0.6s infinite;
-
-}
-
-/* 방향 입력 버튼 hover시 효과 */
+/*  hover시 효과 */
 @keyframes fadeOut {
     0% {
         background: ivory;
@@ -129,7 +107,6 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
         border: 1px solid black;
     }
 }
-
 /* 위아래 반복 이동 효과 */
 @keyframes jumping {
     0% {
@@ -160,8 +137,9 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
 }
 
 /* 방향 입력 표시 */
-section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box p {
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button {
     width: 100%;
+    background: green;
 
     font-size: 20px;
 
@@ -169,19 +147,10 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
     justify-content: space-around;
     align-items: center;
 
+    cursor: pointer;
+
     box-shadow: 1px 1px 3px;
 
-    animation: boxJumping 2s infinite alternate;
-}
-
-@keyframes boxJumping {
-    0% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(-10px);
-    }
 }
 
 /* Player 묶음 박스 */
@@ -192,7 +161,7 @@ section#Outer div.player-box {
 
     position: absolute;
     left: 23%;
-    top: 520px;
+    top: 320px;
 
     z-index: 9999;
 }
@@ -202,7 +171,7 @@ section#Outer div#Player {
     width: 100px;
     height: 100px;
 
-    background-image: url('../../HTML/won/pic/God.png');
+    background: url('../../CSS/won/pic/God.png') no-repeat;
     background-size: 100%;
 
     border-radius: 50%;
@@ -215,6 +184,8 @@ section#Outer div#Player {
     line-height: 2.5;
 
     box-shadow: 0 10px 15px;
+
+    z-index: 1000;
 
     animation: playerJumping 0.5s infinite alternate;
 }
@@ -288,14 +259,28 @@ section#Outer div#Player:hover::before {
 
 section#GoalPost-box {
     width: 100%;
-    height: 100px;
+    height: 350px;
+   
+    background-image: url('../../CSS/won/pic/Supporters.png');
+    z-index: -10;
+    
 }
 
-section#GoalPost-box .box {
-    border: 20px solid black;
-    border-bottom: 1px solid rgb(72, 183, 72);
-
-    width: 65%;
-    height: 400px;
+section#GoalPost-box div.goalPost {
+    /* background: red; */
+    width: 50%;
+    height: 100%;
     margin: 0 auto;
+    
+    background: url('../../CSS/골대이미지/골대찐막.png') no-repeat top;
+    background-size: 100%;
+    z-index: -9;
+    
+}
+
+
+section#GoalPost-box .box {
+    
+    width: 100px;
+
 }
