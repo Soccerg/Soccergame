@@ -18,8 +18,8 @@ section#Outer {
 /* 전체 틀 */
 section#Field-box {
 
-    width: 100%;
-    height: 600px;
+    width: 70%;
+    height: 500px;
     margin: 0 auto;
 
     position: relative;
@@ -36,7 +36,7 @@ div.container {
 /* 공 + spot 묶음 박스 */
 section#Field-box div.ball-spot-direction-box {
     background-image: url('../won/pic/grass.png');
-    
+
     width: 100%;
     height: 100%;
 
@@ -50,14 +50,31 @@ section#Field-box div.container div#Ball {
     background-size: 100%;
     border-radius: 50%;
 
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 
     position: relative;
-    bottom: -30%;
-    left: 49.25%;
+    bottom: -42%;
+    left: 48.9%;
+
+    animation: Tremble 1s infinite alternate;
 
     z-index: 1000;
+}
+
+@keyframes Tremble {
+    0% {
+        transform: rotate(-6deg);
+    }
+    5% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 /* spot */
@@ -70,43 +87,27 @@ section#Field-box div.container div#Spot img {
     height: 20px;
 
     position: absolute;
-    bottom: 57%;
-    left: 49.5%;
+    bottom: 45%;
+    left: 48.95%;
 }
 
 /* 방향 관련 묶음 박스 */
 section#Field-box div.container div.ball-spot-direction-box div.direction {
     width: 30%;
-    height: 20%;
-    
+    height: 30%;
+
     position: absolute;
     bottom: 10%;
     left: 36%;
 }
 
-/* 방향 입력창 + 입력 표시 묶음 박스 */
+/* 입력 표시 묶음 박스 */
 section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box {
     width: 100%;
     margin: 0 auto;
 }
 
-/*  hover시 효과 */
-@keyframes fadeOut {
-    0% {
-        background: ivory;
-        border: 1px solid black;
-    }
 
-    50% {
-        background: black;
-        border: 2px solid ivory;
-    }
-
-    100% {
-        background: ivory;
-        border: 1px solid black;
-    }
-}
 /* 위아래 반복 이동 효과 */
 @keyframes jumping {
     0% {
@@ -139,18 +140,42 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
 /* 방향 입력 표시 */
 section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button {
     width: 100%;
-    background: green;
+    height: 100px;
+    background: lightgray;
 
-    font-size: 20px;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    font-size: 40px;
 
     cursor: pointer;
 
-    box-shadow: 1px 1px 3px;
+    position: relative;
+    top: 50px;
 
+    box-shadow: 1px 1px 3px;
+}
+
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button:hover {
+    animation: fadeOut 1s infinite;
+}
+
+/*  hover시 효과 */
+@keyframes fadeOut {
+    0% {
+        background: ivory;
+        border: 4px solid black;
+        color: black;
+    }
+
+    50% {
+        background: black;
+        border: 4px solid ivory;
+        color: ivory;
+    }
+
+    100% {
+        background: ivory;
+        border: 4px solid black;
+        color: black;
+    }
 }
 
 /* Player 묶음 박스 */
@@ -257,17 +282,17 @@ section#Outer div#Player:hover::before {
 
 /* ======================================================================================== GoalPost */
 
-section#GoalPost-box {
-    width: 100%;
-    height: 350px;
-   
+/* section#GoalPost-box {
+    width: 70%;
+    height: 325px;
+    margin: 0 auto;
     background-image: url('../../CSS/won/pic/Supporters.png');
     z-index: -10;
+    
     
 }
 
 section#GoalPost-box div.goalPost {
-    /* background: red; */
     width: 50%;
     height: 100%;
     margin: 0 auto;
@@ -283,4 +308,77 @@ section#GoalPost-box .box {
     
     width: 100px;
 
+} */
+
+
+section#Outer-GoalPost-Supporters-box {
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box {
+    border: 1px solid #000;
+
+    width: 100%;
+    height: 300px;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul {
+    background: violet;
+
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    overflow: hidden;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Supporters img {
+
+    width: 700px;
+    height: 500px;
+
+    z-index: -100;
+
+    animation: Supporters 0.5s infinite alternate;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPost {
+    width: 33%;
+    height: 300px;
+    background: url('../골대이미지/골대찐막.png') no-repeat;
+    background-size: 100%;
+
+    position: absolute;
+    left: 34%;
+
+
+    z-index: 500;
+
+}
+
+@keyframes Supporters {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    25% {
+        transform: translateY(-25px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    75% {
+        transform: translateY(-35px);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
 }
