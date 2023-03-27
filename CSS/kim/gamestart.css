@@ -1,3 +1,5 @@
+/* 구글 웹폰트 로딩 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Rubik+Vinyl&display=swap');
 
 
 section{
@@ -12,9 +14,9 @@ section{
 
 
 .title{
-    font-size: 50px;
+    font-size: 100px;
     font-weight: 700;
-    font-family: 'Lego', Tahoma, Geneva, Verdana, sans-serif, Times, serif;
+    font-family: 'Rubik Vinyl', cursive;
     position: absolute;
     left: 30%;
     top: 5%;
@@ -63,4 +65,27 @@ section{
         top: 50%;
         z-index: 100;
     }
+}
+
+.rotate {
+    width: 350px;
+    height: 70px;
+   
+    margin: 30px;
+    text-align: center;
+
+    animation: rotation 0.5s linear 1;
+    animation-direction: alternate;
+    /*
+        normal: 0% ~ 100% 움직인다
+        reverse: 100% ~ 0% 
+        alternate: 0% ~ 100% ~ 0%
+        alternate-reverse: 100% ~ 0% ~ 100%
+    */
+}
+
+@keyframes rotation {
+    0% { }
+   
+    100% {transform: rotate(360deg); }
 }
