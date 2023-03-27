@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+           @import "../../CSS/lee/common.css";
+
+           body{
+            width: 100%;
+            height: 1200px;
+            border: solid 1px;
+           }
+
+           section{
+            border: 1px yellow solid;
+            width: 70%;
+            height: 500px;
+            margin: 0 auto;
+            background: url("https://github.com/Soccerg/Soccergame/blob/master/CSS/%EA%B3%A8%EB%8C%80%20%EC%9D%B4%EB%AF%B8%EC%A7%80/%EA%B3%A8%EB%8C%801.png?raw=true") center top/cover;
+           }
+
+           /* 메인메뉴 */
+           section #MainMenu{
+            border: 1px green solid;
+            width: 10%;
+            float:left;
+            padding : 1% 1%;
+        
+           }
+
+           /* 팀 점수 */
+           section #teambar{
+            display: flex;
+            width: 50%;
+            border: 1px blue solid;
+            margin-left: 25%;
+            margin-top: 2%;
+            padding: 1% 1.5%;
+           }
+           section #teambar li{
+            margin-left: 13%;
+           }
+
+           section #teambar .teamname{
+            
+           }
+           section #teambar .score{
+            border : solid 1px
+        }
+           section #teambar li:nth-child(2){
+            margin-left: ;
+           }
+        /* 방향선정 */
+           section #direction{
+            border: 2px white solid;
+            width: 80%;
+            margin: 15% auto;
+           }
+
+           /* 남은횟수 */
+           section #chance {
+            display: flex;
+            border: 1px red solid;
+            width: 30%;
+            margin-left: 32%;
+            padding: 1% 0;
+            
+        }
+           section #chance #t1chance{
+            border: green 1px solid;
+            width: 40%;
+           }
+           section #chance #t2chance{
+            width: 40%;
+            margin-left: 30%;
+        }
+        section #chance li {
+            float: left;
+            border: 1px solid brown;
+            margin-left: 5%;
+            
+        }
+
+        /* 키퍼 */
+        section #goalkeeper{
+            border: 1px white solid;
+            width: 15%;
+            height: 200px;
+            margin: 20% 40%;
+            background: #000;
+            background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340);
+            background-position: center;
+        }
+    </style>
+     
+</head>
+<body>
+    <section class="clearfix">
+
+        <!-- 메인메뉴 -->
+        <ul id="MainMenu">
+            <li>MainMenu</li>
+        </ul>
+        
+        <!-- 팀 점수 -->
+        <ul id="teambar">
+            <li id="team1" class="teamname">team1</li>
+            <li class="score">0</li>
+            <li class="score">0</li>
+            <li id="team2" class="teamname">team2</li>
+        </ul>
+
+        
+        <!-- 남은 횟수 -->
+        <div id="chance">
+            <ul id="t1chance">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <ul id="t2chance">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </div>
+        <!-- 방향선정 -->
+        <!-- <ul id="direction">
+            <li id="left">left</li>
+            <li id="center">center</li>
+            <li id="right">right</li>
+        </ul> -->
+
+        <!-- 키퍼 -->
+        <div id="goalkeeper">
+            "골키퍼"
+        </div>
+    </section>
+</body>
+</html>
