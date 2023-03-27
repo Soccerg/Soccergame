@@ -58,6 +58,8 @@ function playerStartShooting() {
     $player.style.transition = '1s'; // 움직이는 속도
     $player.style.scale = '0.8 0.8'; // 움직일 때 크기 변화
     $player.style.transitionTimingFunction = 'cubic-bezier(1, 0.75, 0.5, 0)'; // 움직일 때 시작과 끝의 효과
+
+    $player.style.rotate = '7200deg';
 }
 
 function reset() { // 슈팅 후 위치 초기화 함수
