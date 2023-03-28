@@ -155,6 +155,7 @@ function shooting() { // 함수가 호출됬을 때
 // 골키퍼
 function save() {
     const $saveNum = Math.floor(Math.random() * 3) + 1;
+    console.log($saveNum);
     
 }
 

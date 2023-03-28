@@ -8,12 +8,10 @@
 
 body {
     width: 100%;
-    height: 100%;
 }
 
 section#Outer {
     position: relative;
-    height: 100%;
 }
 
 /* 전체 틀 */
@@ -34,7 +32,6 @@ section#Field-box {
 
 div.container {
     width: 100%;
-    height: 100%;
     
     position: relative;
 }
@@ -49,7 +46,7 @@ section#Field-box div.ball-spot-direction-box {
 
 
     width: 100%;
-    height: 100%;
+    height: 480px;
 
     float: left;
     position: relative;
@@ -296,7 +293,7 @@ section#Outer div#Player:hover::before {
 /* 골대 + 관중 전체 묶음 틀 */
 section#Outer-GoalPost-Supporters-box {
     width: 70%;
-    height: 300px;
+    height: 100%;
     margin: 0 auto;
 }
 
@@ -398,13 +395,14 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPos
 
 
 section#Outer-GoalPost-Supporters-box {
-    background: yellow;
+    /* background: yellow; */
 }
 
 section#Outer-GoalPost-Supporters-box div.goalKeeper-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    display: inline;
+
+
 }
 
 section#Outer-GoalPost-Supporters-box div.goalKeeper-box div#GoalKeeper {
@@ -443,7 +441,6 @@ section#GoalPost-box div.goalPost {
 
     box-shadow: 0 10px 15px;
 
-    z-index: 500;
 }
 
 

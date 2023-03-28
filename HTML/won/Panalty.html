@@ -10,11 +10,8 @@
     <script src="../../JS/won/Panalty.js" defer></script>
 
     <link rel="stylesheet" href="../../CSS/won/Panalty.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../../CSS/lee/golapost.css">
-=======
     <link rel="stylesheet" href="../../CSS/lee/goalPost.css">
->>>>>>> ad2fc5b76cc80d83ca6f01d3c3fa582c61799389
 
 </head>
 
@@ -23,20 +20,16 @@
     <section id="Outer">
 
         <!-- 메인메뉴 -->
-        
-        
+
+
         <!-- 키퍼 -->
-        <div id="goalkeeper"></div>
-        
-        <!-- 예비 클릭 -->
-        <div id="button">버튼</div>
         <!-- =============================================================================================================================== -->
-        
+
         <section id="Outer-GoalPost-Supporters-box">
-            <ul id="MainMenu">
-                <li>MainMenu</li>
-            </ul>
-    
+            <div id="goalkeeper"></div>
+
+            <!-- 예비 클릭 -->
+            
             <!-- 팀 점수 -->
             <ul id="teambar">
                 <li id="team1" class="teamname">team1</li>
@@ -44,24 +37,28 @@
                 <li class="score">0</li>
                 <li id="team2" class="teamname">team2</li>
             </ul>
-    
-    
+            
+            
             <!-- 남은 횟수 -->
             <div id="chance">
-                <ul id="t1chance">
+                <ul id="MainMenu">
+                    <li id="inr-Menu">MainMenu</li>
+                </ul>
+                <ul id="t1chance" class="chanceul">
                     <li class="t1">1</li>
                     <li class="t1">2</li>
                     <li class="t1">3</li>
                     <li class="t1">4</li>
                     <li class="t1">5</li>
                 </ul>
-                <ul id="t2chance">
+                <ul id="t2chance" class="chanceul">
                     <li class="t2">1</li>
                     <li class="t2">2</li>
                     <li class="t2">3</li>
                     <li class="t2">4</li>
                     <li class="t2">5</li>
                 </ul>
+                <!-- <div id="button">버튼</div> -->
             </div>
             <nav class="inr-Supporters-goalPost-box">
                 <ul>
@@ -69,20 +66,21 @@
                     <li class="background" id="GoalPost">
                         <!-- 방향선정 -->
                         <ul id="direction">
-                            <li id="left">left</li>
-                            <li id="center">center</li>
-                            <li id="right">right</li>
+                            <li id="left"></li>
+                            <li id="center"></li>
+                            <li id="right"></li>
                         </ul>
                     </li>
                     <li class="background" id="Supporters2"><img src="../../CSS/won/pic/Supporters.png" alt="관증"></li>
                 </ul>
+                <!-- goalKeeper-box -->
+                <div class="goalKeeper-box">
+                    <!-- goalKeeper -->
+                    <div class="goalKeeper" id="GoalKeeper"></div>
+                </div> <!-- end Player-box -->
             </nav>
-            <!-- goalKeeper-box -->
-            <div class="goalKeeper-box">
-                <!-- goalKeeper -->
-                <div class="goalKeeper" id="GoalKeeper"></div>
-            </div> <!-- end Player-box -->
         </section> <!-- Outer-GoalPost-Supporters-box -->
+        
 
 
         <section id="Outer-GoalPost-Supporters-box">
@@ -95,7 +93,6 @@
                 </nav>
         </section>
 
-<<<<<<< HEAD
         <section class="clearfix">
             <!-- 메인메뉴 -->
             <ul id="MainMenu">
@@ -141,26 +138,23 @@
             <!-- 예비 클릭 -->
             <div id="button">버튼</div>
         </section>
-=======
->>>>>>> ad2fc5b76cc80d83ca6f01d3c3fa582c61799389
-
         <!--  -->
         <section id="Field-box">
-
+            
             <div class="container">
-
+                
                 <!-- 공 + spot 묶음 박스 -->
                 <div class="ball-spot-direction-box">
-
+                    
                     <!-- 공 -->
                     <div class="ball" id="Ball"></div>
-
+                    
                     <!-- spot -->
                     <div class="ballSpot" id="Spot"><img src="../../CSS/won/pic/BallSpot.png" alt="스팟"></div>
-
+                    
                     <!-- 방향 관련 묶음 박스 -->
                     <div class="direction">
-
+                        
                         <!-- 입력 표시 묶음 박스  -->
                         <div class="direction-box">
 
