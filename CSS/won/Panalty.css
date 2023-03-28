@@ -16,8 +16,15 @@ section#Outer {
 
 /* 전체 틀 */
 section#Field-box {
+
     
     width: 70%;
+    height: 600px;
+
+
+    width: 70%;
+    height: 500px;
+
     margin: 0 auto;
     
     position: relative;
@@ -33,8 +40,10 @@ div.container {
 /* 공 + spot 묶음 박스 */
 section#Field-box div.ball-spot-direction-box {
     background-image: url('../won/pic/grass.png');
+
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+
 
     width: 100%;
     height: 480px;
@@ -74,6 +83,14 @@ section#Field-box div.container div#Ball {
         transform: rotate(3deg);
     }
 
+
+    5% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(3deg);
+    }
+
     100% {
         transform: rotate(0);
     }
@@ -90,7 +107,11 @@ section#Field-box div.container div#Spot img {
 
     position: absolute;
     bottom: 45%;
+
     left: 48.91%;
+
+    left: 48.95%;
+
 }
 
 /* 방향 관련 묶음 박스 */
@@ -167,11 +188,21 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
         color: black;
     }
 
+
     50% {
         background: black;
         border: 4px solid ivory;
         color: ivory;
     }
+
+
+
+    50% {
+        background: black;
+        border: 4px solid ivory;
+        color: ivory;
+    }
+
 
     100% {
         background: ivory;
@@ -362,6 +393,7 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPos
 
 
 
+
 section#Outer-GoalPost-Supporters-box {
     /* background: yellow; */
 }
@@ -378,6 +410,24 @@ section#Outer-GoalPost-Supporters-box div.goalKeeper-box div#GoalKeeper {
     height: 100px;
 
     background: url('../../CSS/won/pic/God.png') no-repeat;
+
+/* section#GoalPost-box {
+    width: 70%;
+    height: 325px;
+    margin: 0 auto;
+    background-image: url('../../CSS/won/pic/Supporters.png');
+    z-index: -10;
+    
+    
+}
+
+section#GoalPost-box div.goalPost {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    
+    background: url('../../CSS/골대이미지/골대찐막.png') no-repeat top;
+
     background-size: 100%;
 
     border-radius: 50%;
@@ -419,4 +469,80 @@ section#Outer-GoalPost-Supporters-box div.goalKeeper-box div#GoalKeeper {
 
 
 
+
+
+} */
+
+
+section#Outer-GoalPost-Supporters-box {
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box {
+    border: 1px solid #000;
+
+    width: 100%;
+    height: 300px;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul {
+    background: violet;
+
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    overflow: hidden;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Supporters img {
+
+    width: 700px;
+    height: 500px;
+
+    z-index: -100;
+
+    animation: Supporters 0.5s infinite alternate;
+
+}
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPost {
+    width: 33%;
+    height: 300px;
+    background: url('../골대이미지/골대찐막.png') no-repeat;
+    background-size: 100%;
+
+    position: absolute;
+    left: 34%;
+
+
+    z-index: 500;
+
+}
+
+@keyframes Supporters {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    25% {
+        transform: translateY(-25px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    75% {
+        transform: translateY(-35px);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
 

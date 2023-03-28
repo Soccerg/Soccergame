@@ -8,7 +8,7 @@ section {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-
+    
 }
 
 /* 골포스트 이미지 */
@@ -20,8 +20,6 @@ section .goalPost {
     background-size: 100%;
     height: 50%;
     margin: 0 auto;
-
-
 
 }
 
@@ -36,34 +34,34 @@ section .down {
     background-size: cover;
     background-position: center;
     position: relative;
+    
 }
 
 /* 공 이미지 */
-.down #ball {
-    width: 10%;
-    height: 20%;
+section #ball {
+    width: 5%;
+    height: 10%;
     border-radius: 50%;
-    
     background-repeat: no-repeat;
     background-image: url(/CSS/골대이미지/Ball.png);
     background-position: center;
     background-size: cover;
-    position: absolute;
-    left: 44%;
-    top: 50%;
+    position:absolute;
+    left: 47%;
+    top: 75%;
     z-index: 999;
 }
 .move {
     animation: move 2s linear infinite;
 }
+
 @keyframes move {
-    50% {
-        top: 0;
-        transform: translateX(0) translateY() rotate(0) scale(1);
+    10% {
+        top: 20%;
     }
-    50% {
+    100% {
         top: 10%;
-        transform: translateX(-70%) rotate(720deg) scale(2);
+        transform: translateX(25%) rotate(720deg) scale(1);
     }
 }
 
@@ -88,9 +86,8 @@ section .down {
 
 }
 
-
 #gameStart {
-    width: 15%;
+    width: 20%;
     height: 100px;
     background: white;
     box-shadow: 25px 20px 20px black;
@@ -106,6 +103,8 @@ section .down {
     transform: translate(-50%, 80%);
     opacity: 0;
     z-index: -100;
+    text-decoration: none;
+    color: black;
 }
 
 #gameStart.show {
@@ -153,4 +152,137 @@ section .down {
     100% {
         transform: rotate(360deg);
     }
+}
+
+/* Player1 : 키퍼 */
+section #Player1 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 40%;
+    left: 47%;
+
+    background-image: url('../kim/데헤아.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border-radius: 50%;
+    /* border: 7px solid red; */
+    color: black;
+
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2.5;
+    
+    box-shadow: 0 10px 15px;
+
+    animation: playerJumping2 0.3s infinite alternate;
+    }
+
+/* Player 동작 효과 */
+@keyframes playerJumping1 {
+    0% {
+        transform: translateY(-200px);
+        height: 90px;
+    }
+
+    100% {
+        transform: translateY(200px);
+        height: 100px;
+    }
+}
+
+
+/* Player 등번호 */
+section #Player1::before {
+    content: '1';
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: red;
+   
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.7em;
+
+    position: relative;
+
+    display: none;
+}
+
+/* Player 등번호 hover 효과 */
+section #Player1:hover::before {
+    display: inline-block;
+
+}
+
+/* Player2 : 키커 */
+section #Player2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 28%;
+
+    background-image: url('../kim/손흥민.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    border-radius: 50%;
+    /* border: 7px solid black; */
+    color: black;
+   
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2.5;
+
+    box-shadow: 0 10px 15px;
+
+    animation: playerJumping2 0.5s infinite alternate;
+}
+
+/* Player2 동작 효과 */
+@keyframes playerJumping2 {
+    0% {
+        transform: translateY(0);
+        height: 90px;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        height: 100px;
+    }
+}
+
+/* Player2 등번호 */
+section #Player2::before {
+    content: '7';
+    color: black;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: white;
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.7em;
+
+    position: relative;
+
+    display: none;
+}
+
+/* Player 등번호 hover 효과 */
+section #Player2:hover::before {
+    display: inline-block;
+
 }
