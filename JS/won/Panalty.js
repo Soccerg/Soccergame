@@ -170,11 +170,6 @@ $directionBtn.forEach($btn => $btn.onclick = e => {
 
     setTimeout(save, 1000);
 
-    if ($btn.id === 'Left') {
-        shootingLeft();
-        $directionBtn.textContent = 1;
-    } else if ($btn.id === 'Center') {
-
     if($btn.id === 'Left') {
         shootingLeft();
         $directionBtn.textContent = 1;
@@ -190,7 +185,6 @@ $directionBtn.forEach($btn => $btn.onclick = e => {
 
 });
 
-});
 
 
 
