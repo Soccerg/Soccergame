@@ -1,53 +1,62 @@
 @import "../lee/common.css";
 
 body {
-    width: 100%;
-    height: 930px;
     border: solid 1px;
-
-    
-}
-
-section {
-    width: 100%;
     margin: 0 auto;
-    /* background-image: url(../../img/lee/제목\ 없음.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-size: 100%; */
-}
 
-/* 메인메뉴 */
-section #MainMenu {
-    width: 10%;
-    float: left;
-    padding: 1% 1%;
-    color: white;
 
 }
+
 
 /* 팀 점수 */
 section #teambar {
     display: flex;
-    width: 50%;
-    margin-left: 25%;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    margin: 0 auto;
+    /* margin-left: 25%;
     padding: 2% 1.5%;
-    border: 1px solid white;
-
+    border: 1px solid white; */
+    
+    animation: backgroundColorEffect 10s infinite alternate;
 }
 
-section #teambar li {
-    margin-left: 13%;
-
+@keyframes backgroundColorEffect {
+    0% {
+        background: red;
+    }
+    20% {
+        background: orange;
+    }
+    40% {
+        background: yellow;
+    }
+    55% {
+        background: green;
+    }
+    70% {
+        background: blue;
+    }
+    85% {
+        background: navy;
+    }
+    100% {
+        background: purple;
+    }
 }
+
 
 section #teambar li:nth-child(1) {
     color: red;
-
+    
 }
 
 section #teambar li:nth-child(4) {
     color: rgb(240, 117, 240);
-
+    
 }
 
 section #teambar .teamname {}
@@ -59,12 +68,12 @@ section #teambar .score {
 
 section #teambar .score:nth-child(2) {
     color: red;
-
+    
 }
 
 section #teambar .score:nth-child(3) {
     color: rgb(240, 117, 240);
-
+    
 }
 
 section #teambar li:nth-child(2) {}
@@ -73,41 +82,71 @@ section #teambar li:nth-child(2) {}
 section #direction {
     /* border: 2px white solid; */
     width: 55%;
-    margin: 14% auto;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
 }
 
 section #direction li {
     /* border: 3px solid red; */
-    width: 29%;
+    width: 33%;
     height: 100px;
-    float: left;
-    margin-left: 2%;
 }
 
 /* 남은횟수 */
 section #chance {
     display: flex;
-    width: 30%;
-    margin-left: 35.5%;
-    padding: 1% 0;
-    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    
+    line-height: 1.5;
+    
+    position: relative;
 
+    animation: backgroundColorEffect 10s infinite alternate;
 }
 
 section #chance #t1chance {
-    width: 40%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 section #chance #t2chance {
-    width: 40%;
-    margin-left: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    right: 60px;
 }
 
 section #chance li {
     float: left;
-    border: 1px solid brown;
-    margin-left: 5%;
+    font-weight: bold;
 
+}
+
+section #chance li::after {
+    content: '';
+    margin-right: 30px;
+    height: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#Outer-GoalPost-Supporters-box div#chance ul.chanceul {
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* 키퍼 */
@@ -130,6 +169,24 @@ section #goalkeeper {
 section #button {
     border: solid 5px yellow;
     width: 5%;
+}
+
+section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
+    width: 125px;
+    height: 100%;
+
+    padding-left: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+
+    cursor: pointer;
+    text-align: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 /* 키퍼이동 좌 */
