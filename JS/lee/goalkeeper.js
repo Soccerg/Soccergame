@@ -6,6 +6,7 @@ const $t2chance=[...document.querySelectorAll('#tchance>li')];
 const $team1score = document.getElementById('team1score');
 
 const $button = document.getElementById('button');
+const $reset = document.getElementById('resetbutton')
 const $left=document.querySelector('.b1');
 const $center=document.querySelector('.b2');
 const $right=document.querySelector('.b3');
