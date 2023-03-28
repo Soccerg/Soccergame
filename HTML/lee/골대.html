@@ -17,19 +17,20 @@
            }
 
            section{
-            border: 1px yellow solid;
             width: 70%;
             height: 500px;
             margin: 0 auto;
-            background: url("https://github.com/Soccerg/Soccergame/blob/master/CSS/%EA%B3%A8%EB%8C%80%20%EC%9D%B4%EB%AF%B8%EC%A7%80/%EA%B3%A8%EB%8C%801.png?raw=true") center top/cover;
-           }
+            background-image: url(../../img/lee/제목\ 없음.jpg);
+            background-repeat: no-repeat;    
+            background-size: 100%;
+        }
 
            /* 메인메뉴 */
            section #MainMenu{
-            border: 1px green solid;
             width: 10%;
             float:left;
             padding : 1% 1%;
+            color: white;
         
            }
 
@@ -37,42 +38,66 @@
            section #teambar{
             display: flex;
             width: 50%;
-            border: 1px blue solid;
             margin-left: 25%;
-            margin-top: 2%;
-            padding: 1% 1.5%;
+            padding: 2% 1.5%;
+            border: 1px solid white;
+
            }
            section #teambar li{
             margin-left: 13%;
-           }
-
-           section #teambar .teamname{
             
            }
+           section #teambar li:nth-child(1){
+            color: red;
+            
+           }
+
+           section #teambar li:nth-child(4){
+            color:  rgb(240, 117, 240);
+            
+           }
+           section #teambar .teamname{
+
+           }
+          
            section #teambar .score{
-            border : solid 1px
+            color: white;
+            font-size: 1.2em;
+        }
+        section #teambar .score:nth-child(2){
+            color: red;
+            
+        }
+        section #teambar .score:nth-child(3){
+            color:  rgb(240, 117, 240);
+            
         }
            section #teambar li:nth-child(2){
-            margin-left: ;
            }
         /* 방향선정 */
            section #direction{
             border: 2px white solid;
-            width: 80%;
-            margin: 15% auto;
+            width: 55%;
+            margin: 14% auto;
            }
+           section #direction li{
+            border: 3px solid red;
+            width: 29%;
+            height: 100px;
+            float: left;
+            margin-left: 2%;
+        }
 
            /* 남은횟수 */
            section #chance {
             display: flex;
-            border: 1px red solid;
             width: 30%;
-            margin-left: 32%;
+            margin-left: 35.5%;
             padding: 1% 0;
+            border: 1px solid white;
             
         }
            section #chance #t1chance{
-            border: green 1px solid;
             width: 40%;
            }
            section #chance #t2chance{
@@ -89,18 +114,83 @@
         /* 키퍼 */
         section #goalkeeper{
             border: 1px white solid;
-            width: 15%;
-            height: 200px;
-            margin: 20% 40%;
+            width: 10%;
+            height: 180px;
+            margin: 25% 45.5%;
             background: #000;
             background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340);
             background-position: center;
+            position:absolute;
+            bottom: 12%;
+            right: -0.5%;
+
+            
         }
+        
+        /* 예비버튼 */
+        section #button{
+            border: solid 5px yellow;
+            width: 5%;
+        }
+
+        /* 키퍼이동 좌 */
+
+        .b1{
+            animation-name: left;
+            animation-duration: 1s;
+            
+        }
+        @keyframes left {
+            0%  {right: 1%;}
+            10%  {right: 2%;}
+            20%  {right: 3%;}
+            30%  {right: 4%;}
+            40%  {right: 5%;}
+            50%  {right: 6%;}
+            60%  {right: 7%;}
+            70%  {right: 8%;}
+            80%  {right: 9%;}
+            90%  {right: 10%;}
+            100%  {right: 11%;}
+            }
+
+        /* 키퍼이동 중 */
+        .b2{
+            animation-name: center;
+            animation-duration: 1s;
+            
+        }
+        @keyframes center {
+            0%  {bottom: 100%;}
+            50%  {bottom: 101%;}
+            100%  {bottom: 102%;}
+            
+            }
+
+            /* 키퍼이동 우 */
+            .b3{
+            animation-name: right;
+            animation-duration: 1s;
+            
+        }
+        @keyframes right {
+            0%  {left: 1%;}
+            10%  {left: 2%;}
+            20%  {left: 3%;}
+            30%  {left: 4%;}
+            40%  {left: 5%;}
+            50%  {left: 6%;}
+            60%  {left: 7%;}
+            70%  {left: 8%;}
+            80%  {left: 9%;}
+            90%  {left: 10%;}
+            100%  {left: 11%;}
+            }
     </style>
      
 </head>
 <body>
-    <section class="clearfix">
+    <section class="clearfix" >
 
         <!-- 메인메뉴 -->
         <ul id="MainMenu">
@@ -108,7 +198,7 @@
         </ul>
         
         <!-- 팀 점수 -->
-        <ul id="teambar">
+        <ul id="teambar" >
             <li id="team1" class="teamname">team1</li>
             <li class="score">0</li>
             <li class="score">0</li>
@@ -117,33 +207,104 @@
 
         
         <!-- 남은 횟수 -->
-        <div id="chance">
+        <div id="chance" >
             <ul id="t1chance">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li class="t1">1</li>
+                <li class="t1">2</li>
+                <li class="t1">3</li>
+                <li class="t1">4</li>
+                <li class="t1">5</li>
             </ul>
             <ul id="t2chance">
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
+                <li class="t2">1</li>
+                <li class="t2">2</li>
+                <li class="t2">3</li>
+                <li class="t2">4</li>
+                <li class="t2">5</li>
             </ul>
         </div>
         <!-- 방향선정 -->
-        <!-- <ul id="direction">
+        <ul id="direction" >
             <li id="left">left</li>
             <li id="center">center</li>
             <li id="right">right</li>
-        </ul> -->
+        </ul>
 
         <!-- 키퍼 -->
-        <div id="goalkeeper">
-            "골키퍼"
-        </div>
+        <div id="goalkeeper"></div>
+
+        <!-- 예비 클릭 -->
+        <div id="button">버튼</div>
     </section>
+
+
+    <script>
+
+        const $keep=document.getElementById('goalkeeper');
+        const $direction=document.getElementById('direction');
+        const $randomnum=Math.floor(Math.random() * (3)) + 1;
+        const $t1chance=[...document.querySelectorAll('.t1')];
+        const $t2chance=[...document.querySelectorAll('.t2')];
+
+        const $button = document.getElementById('button');
+       const $left=document.querySelector('.b1');
+       const $center=document.querySelector('.b2');
+       const $right=document.querySelector('.b3');
+       const $save=Math.floor(Math.random() * (3)) + 1;
+       const $shooting=Math.floor(Math.random() * (3)) + 1;
+        //  function moveleft(){
+        //     $keep.style.translate = '350px 350px'
+        // }
+        // function moveright(){
+        //     $keep.style.translate = '0px -350px'
+        // }
+        // function keepAnimation(){
+        //     $keep.style.transition='0.5s';
+        //     $ball.style.scale = '0.8 0.8'; 
+        //     $ball.style.rotate = '2000deg'; 
+        // }
+
+        function reset(){
+            $keep.style.transition=null;
+            $keep.style.translate='0 0';
+            
+        }
+         
+    
+        
+       
+        
+            $button.onclick=()=>{
+                for(let i=1; i<10; i++){
+        if($randomnum===1){
+            $keep.classList.add('b1');setTimeout(reset, 2500);
+        }else if($randomnum===2){
+            $keep.classList.add('b2'); setTimeout(reset, 2500);
+        }else{
+            $keep.classList.add('b3'); setTimeout(reset, 2500);
+
+        }
+        
+    }
+
+            // switch($randomnum){
+            //     case 1:$keep.classList.add('b1'); break;
+            //     case 2:$keep.classList.add('b2'); break;
+            //     default:$keep.classList.add('b3'); 
+            
+            // }
+                // if(1===$save){
+                //     $t1chance[0].style.backgroundcolor='blue';
+                //     }
+                
+            }
+            
+
+        
+        
+      
+
+
+    </script>
 </body>
 </html>
