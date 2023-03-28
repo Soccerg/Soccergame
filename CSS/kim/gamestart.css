@@ -1,19 +1,80 @@
 /* 구글 웹폰트 로딩 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Rubik+Vinyl&display=swap');
 
+section {
 
-section{
-    background-image: url('https://media.istockphoto.com/id/1443363319/ko/%EC%82%AC%EC%A7%84/%EC%8A%B9%EB%B6%80%EC%B0%A8%EA%B8%B0-%EC%A7%80%EC%A0%90%EC%97%90%EC%84%9C-%ED%9D%91%EB%B0%B1-%EA%B0%80%EC%A3%BD-%EC%B6%95%EA%B5%AC-%EB%B0%B0%EA%B2%BD%EC%97%90-%EB%AA%A9%ED%91%9C-%EA%B2%8C%EC%8B%9C%EB%AC%BC-%ED%91%B8%EB%A5%B8-%EC%9E%94%EB%94%94-%EC%95%84%EC%8A%A4%ED%8A%B8%EB%A1%9C-%ED%84%B0%ED%94%84.jpg?s=612x612&w=0&k=20&c=fT1uIeRLIYHlGcGzdA8PN402POf9ps37YVkflKdMlOo=');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -175px -60px;
     width: 50%;
     height: 100vh;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* 골포스트 이미지 */
+section .goalPost {
+
+    width: 100%;
+    background-image: url('../골대이미지/골대\ 마지막.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 50%;
+    margin: 0 auto;
+
+
+
+}
+
+/* 잔디 이미지 */
+section .down {
+
+    width: 100%;
+    height: 50%;
+    background-image: url('../골대이미지/잔디.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* 공 이미지 */
+.down #ball {
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    
+    background-repeat: no-repeat;
+    background-image: url(/CSS/골대이미지/Ball.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 44%;
+    top: 50%;
+    z-index: 999;
+}
+.move {
+    animation: move 2s linear infinite;
+}
+@keyframes move {
+    50% {
+        top: 0;
+        transform: translateX(0) translateY() rotate(0) scale(1);
+    }
+    50% {
+        top: 10%;
+        transform: translateX(-70%) rotate(720deg) scale(2);
+    }
 }
 
 
-.title{
+
+
+
+
+
+
+.title {
     font-size: 100px;
     font-weight: 700;
     font-family: 'Rubik Vinyl', cursive;
@@ -24,7 +85,7 @@ section{
     rotate: -5deg;
     color: white;
 
-    
+
 }
 
 
@@ -42,7 +103,7 @@ section{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, 220%);
+    transform: translate(-50%, 80%);
     opacity: 0;
     z-index: -100;
 }
@@ -56,10 +117,12 @@ section{
         opacity: 0;
         top: -50%;
     }
+
     50% {
         opacity: 0.5;
         top: 0;
     }
+
     100% {
         opacity: 1;
         top: 50%;
@@ -70,7 +133,7 @@ section{
 .rotate {
     width: 350px;
     height: 70px;
-   
+
     margin: 30px;
     text-align: center;
 
@@ -85,7 +148,9 @@ section{
 }
 
 @keyframes rotation {
-    0% { }
-   
-    100% {transform: rotate(360deg); }
+    0% {}
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
