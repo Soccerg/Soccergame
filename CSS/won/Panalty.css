@@ -13,14 +13,14 @@ body {
 
 section#Outer {
     position: relative;
-
+    height: 100%;
 }
 
 /* 전체 틀 */
 section#Field-box {
     
     width: 70%;
-    height: 500px;
+    height: 600px;
     margin: 0 auto;
     
     position: relative;
@@ -279,7 +279,6 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box {
 
 /* 골대 + 관중 ul*/
 section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul {
-    background: violet;
 
     width: 100%;
     height: 300px;
@@ -406,7 +405,7 @@ section#Outer-GoalPost-Supporters-box div.goalKeeper-box div#GoalKeeper {
 
 
 
-
+ 
 
 
 
