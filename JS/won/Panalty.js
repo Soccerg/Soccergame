@@ -94,18 +94,11 @@ function playerStartShooting() {
     $player.style.animation = 'none'; // animation 효과 없애기
     $player.style.translate = '330px -140px'; // 움직이는 방향
 
+    $player.style.transition = '1s'; // 움직이는 속도
     $player.style.transitionProperty = 'background-image, translate'; // 움직이는 대상
     $player.style.transitionDuration = '0.01s, 1s'; // 움직이는 대상의 속도
     $player.style.scale = '0.8 0.8'; // 움직일 때 크기 변화
     $player.style.transitionTimingFunction = 'cubic-bezier(1, 0.75, 0.5, 0)'; // 움직일 때 시작과 끝의 효과
-    $player.style.rotate = '7200deg';
-}
-
-
-    $player.style.transition = '1s'; // 움직이는 속도
-    $player.style.scale = '0.8 0.8'; // 움직일 때 크기 변화
-    $player.style.transitionTimingFunction = 'cubic-bezier(1, 0.75, 0.5, 0)'; // 움직일 때 시작과 끝의 효과
-
     $player.style.rotate = '7200deg';
 }
 
@@ -124,7 +117,7 @@ function reset() { // 슈팅 후 위치 초기화 함수
 
 
     $player.style.backgroundImage = "url('../../CSS/WON/pic/God.png')";
-    
+
 
     // 공
     $ball.style.transition = null; // 원위치로 빠르게 복귀
@@ -139,12 +132,12 @@ function shooting() { // 함수가 호출됬을 때
     playerStartShooting();
 
 
-    
+
 }
 
 function shooting() { // 함수가 호출됬을 때
     playerStartShooting();
-    
+
 
     setTimeout(reset, 2500);
     setTimeout(afterShooting, 2500);
@@ -156,10 +149,7 @@ function shooting() { // 함수가 호출됬을 때
 function save() {
     const $saveNum = Math.floor(Math.random() * 3) + 1;
     console.log($saveNum);
-    
 }
-
-
 
 // ============================================================================================= 호출부(이벤트)
 // 마우스로 방향버튼 클릭 시
@@ -170,27 +160,23 @@ $directionBtn.forEach($btn => $btn.onclick = e => {
 
     setTimeout(save, 1000);
 
-    if ($btn.id === 'Left') {
-        shootingLeft();
-        $directionBtn.textContent = 1;
-    } else if ($btn.id === 'Center') {
+        if ($btn.id === 'Left') {
+            shootingLeft();
+            $directionBtn.textContent = 1;
+        } else if ($btn.id === 'Center') {
+            shootingCenter();
+            $directionBtn.textContent = 2;
+        } else {
+            shootingRight();
+            $directionBtn.textContent = 3;
+        }
+    });
 
-    if($btn.id === 'Left') {
-        shootingLeft();
-        $directionBtn.textContent = 1;
-    } else if($btn.id === 'Center') {
-
-        shootingCenter();
-        $directionBtn.textContent = 2;
-    } else {
-        shootingRight();
-        $directionBtn.textContent = 3;
-    }
+    
 
 
-});
 
-});
+
 
 
 
