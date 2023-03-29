@@ -17,22 +17,18 @@ section#Outer {
 /* 전체 틀 */
 section#Field-box {
 
-    
+
     width: 70%;
     height: 600px;
 
-
-    width: 70%;
-    height: 500px;
-
     margin: 0 auto;
-    
+
     position: relative;
 }
 
 div.container {
     width: 100%;
-    
+
     position: relative;
 }
 
@@ -83,17 +79,6 @@ section#Field-box div.container div#Ball {
         transform: rotate(3deg);
     }
 
-
-    5% {
-        transform: rotate(0);
-    }
-    10% {
-        transform: rotate(3deg);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
 }
 
 /* spot */
@@ -106,11 +91,9 @@ section#Field-box div.container div#Spot img {
     height: 20px;
 
     position: absolute;
-    bottom: 45%;
-
+    bottom: 44%;
     left: 48.91%;
 
-    left: 48.95%;
 
 }
 
@@ -164,7 +147,6 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
 section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button {
     width: 100%;
     height: 100px;
-    background: lightgray;
 
     font-size: 40px;
 
@@ -173,41 +155,35 @@ section#Field-box div.container div.ball-spot-direction-box div.direction div.di
     position: relative;
     top: 50px;
 
-    box-shadow: 1px 1px 3px;
+    box-shadow: 0 0 10px;
+    box-sizing: border-box;
+}
+section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button p{
+    display: none;
 }
 
 section#Field-box div.container div.ball-spot-direction-box div.direction div.direction-box nav.inputDirection-box button:hover {
-    animation: fadeOut 1s infinite;
+    animation: fadeOut 1s infinite alternate;
 }
 
 /*  hover시 효과 */
 @keyframes fadeOut {
     0% {
+        background: black;
+        border: 10px solid ivory;
+        color: ivory;
+    }
+
+    50% {
         background: ivory;
-        border: 4px solid black;
+        border: 10px solid black;
         color: black;
+
     }
-
-
-    50% {
-        background: black;
-        border: 4px solid ivory;
-        color: ivory;
-    }
-
-
-
-    50% {
-        background: black;
-        border: 4px solid ivory;
-        color: ivory;
-    }
-
-
     100% {
-        background: ivory;
-        border: 4px solid black;
-        color: black;
+        background: black;
+        border: 10px solid ivory;
+        color: ivory;
     }
 }
 
@@ -293,7 +269,6 @@ section#Outer div#Player:hover::before {
 /* 골대 + 관중 전체 묶음 틀 */
 section#Outer-GoalPost-Supporters-box {
     width: 70%;
-    height: 100%;
     margin: 0 auto;
 }
 
@@ -326,7 +301,8 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Support
     /* animation: Supporters-left-right 1s infinite alternate; */
     /* animation: SuccessShooting 0.05s infinite alternate; */
 }
-section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Supporters2 img{
+
+section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Supporters2 img {
     width: 800px;
     height: 600px;
 
@@ -336,11 +312,13 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Support
     /* animation: Supporters-left-right 1s infinite alternate; */
     /* animation: SuccessShooting 0.05s infinite alternate; */
 }
+
 @keyframes Supporters-left-right {
-    0%{
+    0% {
         transform: scaleX(0);
     }
-    100%{
+
+    100% {
         transform: scaleX(-0.5);
     }
 }
@@ -363,186 +341,27 @@ section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPos
     0% {
         transform: translateY(-20px);
     }
-    80%{
-        transform: translateY(-30px);   
+
+    80% {
+        transform: translateY(-30px);
     }
-    90%{
-        transform: translateY(-25px);   
+
+    90% {
+        transform: translateY(-25px);
     }
+
     100% {
         transform: translateY(-35px);
     }
 }
+
 /* 슈팅 성공 시 관중 효과 */
 @keyframes SuccessShooting {
-    0%{
-        transform: translateY(-20px);
-    }   
-    100%{
-        transform: translateY(-50px);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-section#Outer-GoalPost-Supporters-box {
-    /* background: yellow; */
-}
-
-section#Outer-GoalPost-Supporters-box div.goalKeeper-box {
-    
-    display: inline;
-
-
-}
-
-section#Outer-GoalPost-Supporters-box div.goalKeeper-box div#GoalKeeper {
-    width: 100px;
-    height: 100px;
-
-    background: url('../../CSS/won/pic/God.png') no-repeat;
-
-/* section#GoalPost-box {
-    width: 70%;
-    height: 325px;
-    margin: 0 auto;
-    background-image: url('../../CSS/won/pic/Supporters.png');
-    z-index: -10;
-    
-    
-}
-
-section#GoalPost-box div.goalPost {
-    width: 50%;
-    height: 100%;
-    margin: 0 auto;
-    
-    background: url('../../CSS/골대이미지/골대찐막.png') no-repeat top;
-
-    background-size: 100%;
-
-    border-radius: 50%;
-    border: 7px solid blue;
-    color: black;
-
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
-    line-height: 2.5;
-
-    box-shadow: 0 10px 15px;
-
-}
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-} */
-
-
-section#Outer-GoalPost-Supporters-box {
-    width: 70%;
-    height: 300px;
-    margin: 0 auto;
-}
-
-section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box {
-    border: 1px solid #000;
-
-    width: 100%;
-    height: 300px;
-
-}
-
-section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul {
-    background: violet;
-
-    width: 100%;
-    height: 300px;
-
-    display: flex;
-    overflow: hidden;
-
-}
-
-section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#Supporters img {
-
-    width: 700px;
-    height: 500px;
-
-    z-index: -100;
-
-    animation: Supporters 0.5s infinite alternate;
-
-}
-
-section#Outer-GoalPost-Supporters-box .inr-Supporters-goalPost-box ul li#GoalPost {
-    width: 33%;
-    height: 300px;
-    background: url('../골대이미지/골대찐막.png') no-repeat;
-    background-size: 100%;
-
-    position: absolute;
-    left: 34%;
-
-
-    z-index: 500;
-
-}
-
-@keyframes Supporters {
     0% {
         transform: translateY(-20px);
     }
 
-    25% {
-        transform: translateY(-25px);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
-
-    75% {
-        transform: translateY(-35px);
-    }
-
     100% {
-        transform: translateY(-40px);
+        transform: translateY(-50px);
     }
 }
-
