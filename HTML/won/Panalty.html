@@ -8,10 +8,14 @@
     <title>Document</title>
 
     <script src="../../JS/won/Panalty.js" defer></script>
+    <script src="../../JS/lee/goalkeeper.js" defer></script>
+    
 
     <link rel="stylesheet" href="../../CSS/won/Panalty.css">
     <link rel="stylesheet" href="../../CSS/lee/goalPost.css">
+    
 
+</head>
 </head>
 
 <body>
@@ -25,6 +29,7 @@
         <!-- =============================================================================================================================== -->
 
         <section id="Outer-GoalPost-Supporters-box">
+            <div id="goalkeeper"></div>
 
             <!-- 예비 클릭 -->
 
@@ -57,12 +62,14 @@
                     <li class="t2">5</li>
                 </ul>
                 <!-- <div id="button">버튼</div> -->
+
+
+                <!-- ==================================================== -->
             </div>
             <nav class="inr-Supporters-goalPost-box">
                 <ul>
                     <li class="background" id="Supporters1"><img src="../../CSS/won/pic/Supporters.png" alt="관중"></li>
                     <li class="background" id="GoalPost">
-                        <div id="goalkeeper"></div>
                         <!-- 방향선정 -->
                         <ul id="direction">
                             <li id="left"></li>
@@ -76,59 +83,58 @@
         </section> <!-- Outer-GoalPost-Supporters-box -->
 
 
+        <section class="clearfix">
 
+            <!--  -->
+            <section id="Field-box">
 
+                <div class="container">
 
-        <!--  -->
-        <section id="Field-box">
+                    <!-- 공 + spot 묶음 박스 -->
+                    <div class="ball-spot-direction-box">
 
-            <div class="container">
+                        <!-- 공 -->
+                        <div class="ball" id="Ball"></div>
 
-                <!-- 공 + spot 묶음 박스 -->
-                <div class="ball-spot-direction-box">
+                        <!-- spot -->
+                        <div class="ballSpot" id="Spot"><img src="../../CSS/won/pic/BallSpot.png" alt="스팟"></div>
 
-                    <!-- 공 -->
-                    <div class="ball" id="Ball"></div>
+                        <!-- 방향 관련 묶음 박스 -->
+                        <div class="direction">
 
-                    <!-- spot -->
-                    <div class="ballSpot" id="Spot"><img src="../../CSS/won/pic/BallSpot.png" alt="스팟"></div>
+                            <!-- 입력 표시 묶음 박스  -->
+                            <div class="direction-box">
 
-                    <!-- 방향 관련 묶음 박스 -->
-                    <div class="direction">
+                                <!-- 방향 입력 표시 묶음 박스 -->
+                                <nav class="inputDirection-box">
 
-                        <!-- 입력 표시 묶음 박스  -->
-                        <div class="direction-box">
+                                    <!-- 방향 입력 표시 -->
+                                    <!-- 왼쪽 -->
+                                    <button class="selectDirection" id="Left">◀<p>1</p></button>
+                                    <!-- 중앙 -->
+                                    <button class="selectDirection" id="Center">▲</button>
+                                    <!-- 오른쪽 -->
+                                    <button class="selectDirection" id="Right">▶</button>
 
-                            <!-- 방향 입력 표시 묶음 박스 -->
-                            <nav class="inputDirection-box">
+                                </nav> <!-- end inputDirection-box -->
 
-                                <!-- 방향 입력 표시 -->
-                                <!-- 왼쪽 -->
-                                <button class="selectDirection" id="Left">◀</button>
-                                <!-- 중앙 -->
-                                <button class="selectDirection" id="Center">▲</button>
-                                <!-- 오른쪽 -->
-                                <button class="selectDirection" id="Right">▶</button>
+                            </div> <!-- end diretion-box -->
 
-                            </nav> <!-- end inputDirection-box -->
+                        </div> <!-- end direction -->
 
-                        </div> <!-- end diretion-box -->
+                    </div> <!-- end ball-spot-direction-box -->
 
-                    </div> <!-- end direction -->
+                </div> <!-- end container -->
 
-                </div> <!-- end ball-spot-direction-box -->
+                <!-- Player-box -->
+                <div class="player-box">
+                    <!-- Player -->
+                    <div class="player" id="Player"></div>
+                </div> <!-- end Player-box -->
 
-            </div> <!-- end container -->
+            </section> <!-- end Field-box section -->
 
-            <!-- Player-box -->
-            <div class="player-box">
-                <!-- Player -->
-                <div class="player" id="Player"></div>
-            </div> <!-- end Player-box -->
-
-        </section> <!-- end Field-box section -->
-
-    </section> <!-- end section#Outer -->
+        </section> <!-- end section#Outer -->
 </body>
 
 </html>

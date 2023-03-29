@@ -20,7 +20,7 @@ section #teambar {
     /* margin-left: 25%;
     padding: 2% 1.5%;
     border: 1px solid white; */
-
+    
     animation: backgroundColorEffect 10s infinite alternate;
 }
 
@@ -28,27 +28,21 @@ section #teambar {
     0% {
         background: red;
     }
-
     20% {
         background: orange;
     }
-
     40% {
         background: yellow;
     }
-
     55% {
         background: green;
     }
-
     70% {
         background: blue;
     }
-
     85% {
         background: navy;
     }
-
     100% {
         background: purple;
     }
@@ -57,15 +51,14 @@ section #teambar {
 
 section #teambar li:nth-child(1) {
     color: red;
-
+    
 }
 
 section #teambar li:nth-child(4) {
     color: rgb(240, 117, 240);
-
+    
 }
 
-section #teambar .teamname {}
 
 section #teambar .score {
     color: white;
@@ -74,12 +67,12 @@ section #teambar .score {
 
 section #teambar .score:nth-child(2) {
     color: red;
-
+    
 }
 
 section #teambar .score:nth-child(3) {
     color: rgb(240, 117, 240);
-
+    
 }
 
 section #teambar li:nth-child(2) {}
@@ -89,11 +82,11 @@ section #direction {
     /* border: 2px white solid; */
     width: 55%;
     margin: 0 auto;
-
+    
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    
 }
 
 section #direction li {
@@ -107,11 +100,11 @@ section #chance {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     width: 100%;
-
+    
     line-height: 1.5;
-
+    
     position: relative;
 
     animation: backgroundColorEffect 10s infinite alternate;
@@ -159,21 +152,26 @@ section#Outer-GoalPost-Supporters-box div#chance ul.chanceul {
 section #goalkeeper {
     border: 1px white solid;
     width: 100px;
-    height: 220px;
+    height: 180px;
     margin: 25% 45.5%;
     background: #000;
-    background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340);
+    background: url('../../CSS/lee/pic/De-hea-normal.png');
     background-position: center;
+    background-size: 105px;
 
-    /* z-index: 1000; */
+    position: absolute;
+    bottom: 13%;
+    right: 1%;
+
+    z-index: 1000;
 
 }
 
 /* 예비버튼 */
-section #button {
+/* section #button {
     border: solid 5px yellow;
     width: 5%;
-}
+} */
 
 section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     width: 125px;
@@ -196,18 +194,12 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 /* 키퍼이동 좌 */
 
 .b1 {
-    animation-name: left;
-    animation-duration: 1s;
-
-    transform: rotate(-90deg);
-    transform: none;
-
+    animation: left 0.4s;
 }
 
 @keyframes left {
     0% {
-        right: 1%;
-        transform: rotate(0deg);
+        right: 1%; transform: rotate(0deg);
     }
 
     10% {
@@ -247,46 +239,39 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     }
 
     100% {
-        right: 11%;
-        transform: rotate(-60deg);
+        right: 11%; transform: rotate(-60deg);;
     }
 }
 
-
 /* 키퍼이동 중 */
 .b2 {
-    animation-name: center;
-    animation-duration: 2s;
+    animation: center 0.4s;
 
 }
 
 @keyframes center {
     0% {
-        bottom: 100px;
+        bottom: 100%;
     }
 
-    10% {
-        bottom: 102px;
+    50% {
+        bottom: 101%;
     }
 
-    20% {
-        bottom: 105px;
+    100% {
+        bottom: 102%;
     }
 
 }
 
 /* 키퍼이동 우 */
 .b3 {
-    animation-name: right;
-    animation-duration: 1s;
-    transform: rotate(90deg);
-    transform: none;
+    animation: right 0.4s;
 }
 
 @keyframes right {
     0% {
-        right: 1%;
-        transform: rotate(0deg);
+        left: 1%; transform: rotate(0deg);
     }
 
     10% {
@@ -326,7 +311,6 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     }
 
     100% {
-        right: 11%;
-        transform: rotate(60deg);
+        left: 11%; transform: rotate(60deg);
     }
 }
