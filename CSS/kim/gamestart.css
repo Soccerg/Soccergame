@@ -8,6 +8,7 @@ section {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    background-image: url('../골대이미지/');
     
 }
 
@@ -39,36 +40,63 @@ section .down {
 
 /* 공 이미지 */
 section #ball {
-    width: 5%;
-    height: 10%;
+    width: 4%;
+    height: 8%;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-image: url(/CSS/골대이미지/Ball.png);
     background-position: center;
     background-size: cover;
     position:absolute;
-    left: 47%;
-    top: 75%;
+
+    right: 32%;
+    top: 78%;
     z-index: 999;
 }
+/* 강아지 이미지 */
+section #dog{
+    width: 7%;
+    height: 14%;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-image: url('../../CSS/kim/강아지.png');
+    background-position: center;
+    background-size: contain;
+    position:absolute;
+    right: 25%;
+    top: 75%;
+    z-index: 999;
+
+}
+.move2 {
+    animation: move2 1.4s 1 linear;
+}
+
+@keyframes move2 {
+    10% {
+        transform: translate(0) 
+    }
+    70% {
+        right:30%;
+        transform: translate(-800px)  scale(1);
+    }
+}
+
+
+
 .move {
-    animation: move 2s linear infinite;
+    animation: move 1.2s  1 linear;
 }
 
 @keyframes move {
     10% {
-        top: 20%;
+        transform: translate(0) 
     }
-    100% {
-        top: 10%;
-        transform: translateX(25%) rotate(720deg) scale(1);
+    70% {
+        right:30%;
+        transform: translate(-800px)  scale(1);
     }
 }
-
-
-
-
-
 
 
 
@@ -159,8 +187,8 @@ section #Player1 {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 40%;
-    left: 47%;
+    top: 75%;
+    left: 27%;
 
     background-image: url('../kim/데헤아.png');
     background-position: center;
@@ -245,7 +273,7 @@ section #Player2 {
 
     box-shadow: 0 10px 15px;
 
-    animation: playerJumping2 0.5s infinite alternate;
+    animation: playerJumping2 0.3s infinite alternate;
 }
 
 /* Player2 동작 효과 */
