@@ -131,8 +131,6 @@ function shooting() { // 함수가 호출됬을 때
     playerShootingChangeImg();
     playerStartShooting();
 
-
-
 }
 
 function shooting() { // 함수가 호출됬을 때
