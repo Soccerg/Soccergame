@@ -59,7 +59,6 @@ section #teambar li:nth-child(4) {
     
 }
 
-section #teambar .teamname {}
 
 section #teambar .score {
     color: white;
@@ -152,25 +151,31 @@ section#Outer-GoalPost-Supporters-box div#chance ul.chanceul {
 /* 키퍼 */
 section #goalkeeper {
     border: 1px white solid;
-    width: 10%;
+    width: 100px;
     height: 180px;
     margin: 25% 45.5%;
     background: #000;
+
+    background: url('../../CSS/lee/pic/De-hea-normal.png');
+
     background: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340');
+
     background-position: center;
+    background-size: 105px;
+
     position: absolute;
-    bottom: 12%;
-    right: -0.5%;
+    bottom: 13%;
+    right: 1%;
 
     z-index: 1000;
 
 }
 
 /* 예비버튼 */
-section #button {
+/* section #button {
     border: solid 5px yellow;
     width: 5%;
-}
+} */
 
 section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     width: 125px;
@@ -193,9 +198,7 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 /* 키퍼이동 좌 */
 
 .b1 {
-    animation-name: left;
-    animation-duration: 1s;
-
+    animation: left 0.4s;
 }
 
 @keyframes left {
@@ -246,8 +249,7 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 
 /* 키퍼이동 중 */
 .b2 {
-    animation-name: center;
-    animation-duration: 1s;
+    animation: center 0.4s;
 
 }
 
@@ -268,9 +270,7 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 
 /* 키퍼이동 우 */
 .b3 {
-    animation-name: right;
-    animation-duration: 1s;
-
+    animation: right 0.4s;
 }
 
 @keyframes right {
