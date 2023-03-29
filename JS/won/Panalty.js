@@ -141,6 +141,8 @@ function shooting() { // 함수가 호출됬을 때
 
 
 
+
+
 }
 
 function shooting() { // 함수가 호출됬을 때
