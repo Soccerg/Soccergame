@@ -214,7 +214,11 @@ section #goalkeeper {
     height: 180px;
     margin: 25% 45.5%;
     background: #000;
+
     background: url('../../CSS/lee/pic/De-hea-normal.png');
+
+    background: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340');
+
     background-position: center;
     background-size: 105px;
 
