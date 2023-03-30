@@ -3,39 +3,43 @@
 
 section {
 
-    width: 50%;
+    width: 80%;
     height: 100vh;
     margin: 0 auto;
+
+    background-image: url('../../../CSS/kim/손배경.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
     /* background-image: url('../kim/해안가.png'); */
     background-repeat: no-repeat;
     background-size: cover;
+
     background-position: center;
 }
 
 
 /* 골포스트 이미지 */
 section .goalPost {
-
     width: 100%;
-    background-image: url('../골대이미지/골대\ 마지막.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
     height: 50%;
-    margin: 0 auto;
-
+    /* background-image: url('../kim/손배경.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* 잔디 이미지 */
  section .down {
+
     width: 100%;
     height: 50%;
-    background-image: url('../골대이미지/잔디.png');
+    /* background-image: url('../골대이미지/잔디.png'); */
     background-repeat: no-repeat;
-    background-size: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
-    
+
 } 
 
 /* 공 이미지 */
@@ -48,6 +52,35 @@ section #ball {
     background-position: center;
     background-size: cover;
     position:absolute;
+
+    right: 29%;
+    top: 10%;
+    z-index: 999;
+    display: none;
+}
+
+.move {
+    animation: showUp2 1.5s 1 linear;
+    animation: move 2s 1 linear forwards;
+}
+
+@keyframes move {
+    0% {
+        top: 80%;
+        left: 5%;
+        transform: rotate(0) scale(0);
+    }
+    50%{    
+        top: 50%;
+        left: 50%;        
+        transform: rotate(800deg) scale(1);
+    }
+
+    100% {
+        top: 10%;
+        left: 80%;
+        transform:  rotate(1600deg) scale(2);
+
 
     right: 32%;
     top: 78%;
@@ -79,9 +112,16 @@ section #dog{
     70% {
         right:30%;
         transform: translate(-800px)    scale(1);
+
     }
 }
 
+
+@keyframes showUp2 {
+    0% {
+        opacity: 0;
+        top: -50%;
+    }
 
 
 .move {
@@ -93,6 +133,7 @@ section #dog{
         opacity: 0;
         top: -50%;
     }
+
 
     50% {
         opacity: 0.5;
@@ -118,6 +159,7 @@ section #dog{
 
 
 
+/* 제목 : Soccer Game */
 .title {
     font-size: 100px;
     font-weight: 700;
@@ -129,28 +171,24 @@ section #dog{
     rotate: -5deg;
     color: white;
 
-
 }
-
+/* 게임스타트 버튼 */
 #gameStart {
-    width: 20%;
-    height: 100px;
-    background: white;
-    box-shadow: 25px 20px 20px black;
-    font-size: 45px;
+    width: 10%;
+    height: 130px;
+    font-size: 30px;
     font-weight: 700;
-    border: 2px solid #000;
-    border-radius: 20px;
     text-align: center;
     line-height: 100px;
     position: absolute;
-    left: 50%;
-    top: 50%;
+    border-radius: 50%;
+    /* background-color: ; */
+    left: 80%;
     transform: translate(-50%, 80%);
     opacity: 0;
     z-index: -100;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #gameStart.show {
@@ -170,7 +208,7 @@ section #dog{
 
     100% {
         opacity: 1;
-        top: 50%;
+        top: 450px;
         z-index: 100;
     }
 }
@@ -200,22 +238,27 @@ section #dog{
     }
 }
 
-/* Player1 : 키퍼 */
+/* Player1 : 래시포드 */
 section #Player1 {
     width: 100px;
     height: 100px;
     position: absolute;
+
+    top: 65%;
+    left: 18%;
+
     top: 75%;
     left: 27%;
 
-    background-image: url('../kim/데헤아.png');
+
+    background-image: url('../../../CSS/kim/레쉬포드.png');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 
     border-radius: 50%;
     /* border: 7px solid red; */
-    color: black;
+    color: red;
 
     font-weight: bold;
     font-size: 30px;
@@ -243,7 +286,7 @@ section #Player1 {
 
 /* Player 등번호 */
 section #Player1::before {
-    content: '1';
+    content: '9';
     color: white;
 
     width: 100%;
@@ -255,7 +298,7 @@ section #Player1::before {
     border-radius: 50%;
     font-size: 40px;
     line-height: 1.7em;
-
+    border: 5px solid black;
     position: relative;
 
     display: none;
@@ -267,22 +310,22 @@ section #Player1:hover::before {
 
 }
 
-/* Player2 : 키커 */
+/* Player2 : 손흥민 */
 section #Player2 {
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 85%;
-    left: 28%;
+    top: 75%;
+    left: 20%;
 
-    background-image: url('../kim/손흥민.png');
+    background-image: url('../../../CSS/kim/손흥민.png');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     
     border-radius: 50%;
     /* border: 7px solid black; */
-    color: black;
+    color: white;
    
     font-weight: bold;
     font-size: 30px;
@@ -317,7 +360,7 @@ section #Player2::before {
 
     box-sizing: border-box;
     background: white;
-    border: 5px solid white;
+    border: 5px solid black;
     border-radius: 50%;
     font-size: 40px;
     line-height: 1.7em;
@@ -331,4 +374,102 @@ section #Player2::before {
 section #Player2:hover::before {
     display: inline-block;
 
+}
+
+
+/* Player3 : 아자르 */
+section #Player3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 22%;
+
+    background-image: url('../../../CSS/kim/아자르.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    border-radius: 50%;
+    /* border: 7px solid black; */
+    color: blue;
+   
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2.5;
+
+    box-shadow: 0 10px 15px;
+
+    animation: playerJumping2 0.3s infinite alternate;
+}
+
+/* Player3 동작 효과 */
+@keyframes playerJumping2 {
+    0% {
+        transform: translateY(0);
+        height: 90px;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        height: 100px;
+    }
+}
+
+/* Player3 등번호 */
+section #Player3::before {
+    content: '10';
+    color: black;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: blue;
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.7em;
+
+    position: relative;
+
+    display: none;
+}
+
+/* Player 등번호 hover 효과 */
+section #Player3:hover::before {
+    display: inline-block;
+
+}
+
+/* 골키퍼 : 데헤아 */
+/* #goalkeeper {
+    border: 1px white solid;
+    width: 100px;
+    height: 180px;
+    margin: 25% 45.5%;
+    background: #000;
+    background: url('../../CSS/lee/pic/De-hea-normal.png');
+    background-position: center;
+    background-size: 105px;
+
+    position: absolute;
+    bottom: 13%;
+    right: 1%;
+
+    z-index: 1000;
+
+} */
+.eaLogo {
+    
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    background-image: url('../../../CSS/kim/EA.png');
+    background-size: contain;
+    background-position: cover;
+    background-repeat: no-repeat;
 }

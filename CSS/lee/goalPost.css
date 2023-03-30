@@ -9,6 +9,18 @@ body {
 
 
 /* 팀 점수 */
+section #bar {
+    border: 1px solid #000;
+    
+    
+}
+
+.scoreMenu {
+    background: url('../../CSS/kim/점수판.png')no-repeat;
+    background-size: 100%;
+
+}
+
 section #teambar {
     display: flex;
     justify-content: space-evenly;
@@ -20,43 +32,50 @@ section #teambar {
     /* margin-left: 25%;
     padding: 2% 1.5%;
     border: 1px solid white; */
-    
-    animation: backgroundColorEffect 10s infinite alternate;
+
 }
 
-@keyframes backgroundColorEffect {
-    0% {
-        background: red;
-    }
-    20% {
-        background: orange;
-    }
-    40% {
-        background: yellow;
-    }
-    55% {
-        background: green;
-    }
-    70% {
-        background: blue;
-    }
-    85% {
-        background: navy;
-    }
-    100% {
-        background: purple;
-    }
+section #teambar #team1 {
+    background: url("https://upload.wikimedia.org/wikipedia/ko/thumb/a/ae/Chelsea_FC_Logo.svg/1200px-Chelsea_FC_Logo.svg.png");
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 99999999999999999999999;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    right: 30px;
+    top: 20px;
 }
+
+section #teambar #team2 {
+    background: url("https://i.namu.wiki/i/XwXbAQ090mF1X_K2_gAVrxhWi5y-ZldZpGnrDi-uKmu5UfbDV0o31iNlY8movo-zs3UiKgLSpDWfTKCc4uOuSyT3QX-c9AV1SijaGs4XymrFGGindkgntPouUhf3dWoza6sDOgnI9yA1Y6aCVdTv4A.svg");
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    z-index: 99999999999999999999999;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 5px;
+    top: 20px;
+}
+
+
+
 
 
 section #teambar li:nth-child(1) {
     color: red;
-    
+
 }
 
 section #teambar li:nth-child(4) {
     color: rgb(240, 117, 240);
-    
+
 }
 
 
@@ -67,26 +86,45 @@ section #teambar .score {
 
 section #teambar .score:nth-child(2) {
     color: red;
-    
+    position: relative;
+    left: 83px;
+    top: 20px;
+    width: 26px;
+    height: 44px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 2.1em;
+    background-color: #bbb;
+    border-radius: 20%;
 }
 
 section #teambar .score:nth-child(3) {
     color: rgb(240, 117, 240);
-    
+    position: relative;
+    right: 81px;
+    top: 20px;
+    width: 26px;
+    height: 44px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 2.1em;
+    background-color: #bbb;
+    border-radius: 20%;
+
+
 }
 
-section #teambar li:nth-child(2) {}
 
 /* 방향선정 */
 section #direction {
     /* border: 2px white solid; */
     width: 55%;
     margin: 0 auto;
-    
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
 }
 
 section #direction li {
@@ -100,14 +138,10 @@ section #chance {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     width: 100%;
-    
-    line-height: 1.5;
-    
+    line-height: 1.3;
     position: relative;
 
-    animation: backgroundColorEffect 10s infinite alternate;
 }
 
 section #chance #t1chance {
@@ -118,6 +152,18 @@ section #chance #t1chance {
 
 }
 
+section #chance #t1chance li {
+    margin-left: 23px;
+    position: relative;
+    left: 103px;
+    bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 80%;
+
+
+}
+
 section #chance #t2chance {
     display: flex;
     justify-content: center;
@@ -125,6 +171,19 @@ section #chance #t2chance {
 
     position: relative;
     right: 60px;
+}
+
+section #chance #t2chance li {
+    font-size: 1.5em;
+
+    margin-right: 23px;
+    position: relative;
+    right: 42px;
+    bottom: 10px;
+    text-align: center;
+
+    border-radius: 80%;
+
 }
 
 section #chance li {
@@ -193,6 +252,7 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     position: absolute;
     left: 0;
     top: 0;
+
 }
 
 /* 키퍼이동 좌 */
@@ -203,7 +263,8 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 
 @keyframes left {
     0% {
-        right: 1%; transform: rotate(0deg);
+        right: 1%;
+        transform: rotate(0deg);
     }
 
     10% {
@@ -243,7 +304,9 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     }
 
     100% {
-        right: 11%; transform: rotate(-60deg);;
+        right: 11%;
+        transform: rotate(-60deg);
+        ;
     }
 }
 
@@ -275,7 +338,8 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
 
 @keyframes right {
     0% {
-        left: 1%; transform: rotate(0deg);
+        left: 1%;
+        transform: rotate(0deg);
     }
 
     10% {
@@ -315,6 +379,7 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     }
 
     100% {
-        left: 11%; transform: rotate(60deg);
+        left: 11%;
+        transform: rotate(60deg);
     }
 }
