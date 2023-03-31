@@ -3,20 +3,28 @@ const $title = document.querySelector('.title');
 const $ball = document.getElementById('ball');
 const $dog = document.getElementById('dog');
 
+document.onkeydown = e => {
+    if (e.key === 'Enter') {
+        // console.log('엔터감지');
+        $start.click();
+    }
+};
 
 $start.onmouseover = () => {
-    $start.style.background = '#bbb'; 
+    $start.style.textShadow = '25px 20px 20px greenyellow'; 
     $title.style.textShadow = '25px 20px 20px greenyellow';
     $title.classList.toggle('rotate');
     $ball.classList.toggle('move');
-    $dog.classList.toggle('move2');
+    $ball.style.display = 'block';
+   
     }
 $start.onmouseout = () => {
-    $start.style.background = 'white';
+    $start.style.background = 'none';
+    $start.style.textShadow = 'none'; 
     $title.style.textShadow = 'none';
     $title.classList.toggle('rotate');
     $ball.classList.toggle('move');
-    $dog.classList.toggle('move2');
+    $ball.style.display = 'none';
 }
 
 
