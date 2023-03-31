@@ -495,12 +495,16 @@ section#Outer div.player-box {
     z-index: 9999;
 }
 
-/* Player */
+/* Player : 드록바 */
 section#Outer div#Player {
     width: 100px;
     height: 100px;
 
+
+    background: url('../won/pic/God-normal.png') no-repeat;
+
     background: url('../../CSS/won/pic/God-normal.png') no-repeat;
+
     background-size: 100%;
 
     border-radius: 50%;
@@ -532,7 +536,7 @@ section#Outer div#Player {
     }
 }
 
-/* Player 등번호 */
+/* Player 드록바 등번호 */
 section#Outer div#Player::before {
     content: '11';
     color: white;
@@ -557,6 +561,77 @@ section#Outer div#Player:hover::before {
     display: inline-block;
 
 }
+
+/* Player 손흥민 */
+
+section#Outer div#Player {
+    width: 100px;
+    height: 100px;
+
+    background: url('../won/pic/God-normal.png') no-repeat;
+    background-size: 100%;
+
+    border-radius: 50%;
+    border: 7px solid blue;
+    color: black;
+
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2.5;
+
+    box-shadow: 0 10px 15px;
+
+    z-index: 1000;
+
+    animation: playerJumping 0.5s infinite alternate;
+}
+
+/* Player 동작 효과 */
+@keyframes playerJumping {
+    0% {
+        transform: translateY(0);
+        height: 90px;
+    }
+
+    100% {
+        transform: translateY(-50px);
+        height: 100px;
+    }
+}
+
+/* Player 손흥민 등번호 */
+section#Outer div#Player::before {
+    content: '7';
+    color: white;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+    background: blue;
+    border: 5px solid white;
+    border-radius: 50%;
+    font-size: 40px;
+    line-height: 1.7em;
+
+    position: relative;
+
+    display: none;
+}
+
+/* Player 등번호 hover 효과 */
+section#Outer div#Player:hover::before {
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
 
 /* ======================================================================================== GoalPost */
 
@@ -726,4 +801,38 @@ section#Outer div#ShowBox {
         top: 30%;
         transform: translateX(-50%) rotate(720deg) scale(2);
     }
+
 } */
+div.ball-spot-direction-box div.main-box {
+    background: yellow;
+
+    border: 2px solid #000;
+    border-radius: 15px;
+
+    width: 15%;
+    height: 10%;
+    margin: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    cursor: pointer;
+    
+    position: absolute;
+    bottom: 0;
+}
+
+div.ball-spot-direction-box div.main-box:hover {
+    
+}
+
+div.main-box a#main {
+    font-size: 30px;
+    font-weight: bold;
+
+
+
+} */
+

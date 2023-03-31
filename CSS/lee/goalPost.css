@@ -1,7 +1,7 @@
 @import "../lee/common.css";
 
 body {
-    border: solid 1px;
+    /* border: solid 1px; */
     margin: 0 auto;
 
 
@@ -9,6 +9,29 @@ body {
 
 
 /* 팀 점수 */
+
+/* section #bar{
+    background: url('../kim/점수판.png')no-repeat;
+    background-size: 100%;
+    
+} */
+section .scoreMenu{
+    background-image: url('../kim/점수판.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    animation: borderColor 0.5s infinite alternate;
+}
+
+@keyframes borderColor {
+    0%{ 
+        border: 5px solid black;
+    }100%{
+        border: 5px dashed blue;
+        
+    }
+
 section #bar {
     border: 1px solid #000;
     
@@ -35,13 +58,38 @@ section #teambar {
 
 }
 
+
+section #teambar #team1{
+    background: url("https://upload.wikimedia.org/wikipedia/ko/thumb/a/ae/Chelsea_FC_Logo.svg/1200px-Chelsea_FC_Logo.svg.png"); 
+
 section #teambar #team1 {
     background: url("https://upload.wikimedia.org/wikipedia/ko/thumb/a/ae/Chelsea_FC_Logo.svg/1200px-Chelsea_FC_Logo.svg.png");
+
     display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 99999999999999999999999;
+
+    width: 50px;
+    height: 50px;
+    position:relative;
+    right: 30px;
+    top: 20px;
+}
+section #teambar #team2{
+    background: url("https://i.namu.wiki/i/XwXbAQ090mF1X_K2_gAVrxhWi5y-ZldZpGnrDi-uKmu5UfbDV0o31iNlY8movo-zs3UiKgLSpDWfTKCc4uOuSyT3QX-c9AV1SijaGs4XymrFGGindkgntPouUhf3dWoza6sDOgnI9yA1Y6aCVdTv4A.svg"); 
+    display: block;
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  
+     z-index: 99999999999999999999999;
+     width: 50px;
+     height: 50px;
+    position:relative;
+    left: 5px;    
+
     width: 70px;
     height: 70px;
     position: relative;
@@ -61,6 +109,7 @@ section #teambar #team2 {
     height: 70px;
     position: relative;
     left: 5px;
+
     top: 20px;
 }
 
@@ -87,7 +136,11 @@ section #teambar .score {
 section #teambar .score:nth-child(2) {
     color: red;
     position: relative;
+
+    left: 90px;
+
     left: 83px;
+
     top: 20px;
     width: 26px;
     height: 44px;
@@ -101,7 +154,11 @@ section #teambar .score:nth-child(2) {
 section #teambar .score:nth-child(3) {
     color: rgb(240, 117, 240);
     position: relative;
+
+    right: 87px;
+
     right: 81px;
+
     top: 20px;
     width: 26px;
     height: 44px;
@@ -110,7 +167,6 @@ section #teambar .score:nth-child(3) {
     font-size: 2.1em;
     background-color: #bbb;
     border-radius: 20%;
-
 
 }
 
@@ -151,6 +207,18 @@ section #chance #t1chance {
     align-items: center;
 
 }
+section #chance #t1chance li{
+    
+    margin-left: 23px;
+    position: relative;
+    left: 102px;
+    bottom: 12px;
+    text-align: center;
+    font-size: 1.5em;
+    
+    border-radius: 80%;
+
+}
 
 section #chance #t1chance li {
     margin-left: 23px;
@@ -171,6 +239,18 @@ section #chance #t2chance {
 
     position: relative;
     right: 60px;
+}
+section #chance #t2chance li{
+    font-size: 1.5em;
+
+    margin-right: 22px;
+    position: relative;
+    right: 42px;
+    bottom: 12px;
+    text-align: center;
+    
+    border-radius: 80%;
+
 }
 
 section #chance #t2chance li {
@@ -214,11 +294,7 @@ section #goalkeeper {
     height: 180px;
     margin: 25% 45.5%;
     background: #000;
-
     background: url('../../CSS/lee/pic/De-hea-normal.png');
-
-    background: url('https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F119%2F2019%2F09%2F17%2F0002352486_001_20190917083623536.jpg&type=a340');
-
     background-position: center;
     background-size: 105px;
 
@@ -236,7 +312,7 @@ section #goalkeeper {
     width: 5%;
 } */
 
-section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
+/* section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     width: 125px;
     height: 100%;
 
@@ -253,7 +329,11 @@ section#Outer-GoalPost-Supporters-box ul#MainMenu li#inr-Menu {
     left: 0;
     top: 0;
 
+
+} */
+
 }
+
 
 /* 키퍼이동 좌 */
 
