@@ -9,6 +9,7 @@ body {
 
 
 /* 팀 점수 */
+
 /* section #bar{
     background: url('../kim/점수판.png')no-repeat;
     background-size: 100%;
@@ -30,6 +31,17 @@ section .scoreMenu{
         border: 5px dashed blue;
         
     }
+
+section #bar {
+    border: 1px solid #000;
+    
+    
+}
+
+.scoreMenu {
+    background: url('../../CSS/kim/점수판.png')no-repeat;
+    background-size: 100%;
+
 }
 
 section #teambar {
@@ -46,13 +58,19 @@ section #teambar {
 
 }
 
+
 section #teambar #team1{
     background: url("https://upload.wikimedia.org/wikipedia/ko/thumb/a/ae/Chelsea_FC_Logo.svg/1200px-Chelsea_FC_Logo.svg.png"); 
+
+section #teambar #team1 {
+    background: url("https://upload.wikimedia.org/wikipedia/ko/thumb/a/ae/Chelsea_FC_Logo.svg/1200px-Chelsea_FC_Logo.svg.png");
+
     display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 99999999999999999999999;
+
     width: 50px;
     height: 50px;
     position:relative;
@@ -71,18 +89,42 @@ section #teambar #team2{
      height: 50px;
     position:relative;
     left: 5px;    
+
+    width: 70px;
+    height: 70px;
+    position: relative;
+    right: 30px;
+    top: 20px;
+}
+
+section #teambar #team2 {
+    background: url("https://i.namu.wiki/i/XwXbAQ090mF1X_K2_gAVrxhWi5y-ZldZpGnrDi-uKmu5UfbDV0o31iNlY8movo-zs3UiKgLSpDWfTKCc4uOuSyT3QX-c9AV1SijaGs4XymrFGGindkgntPouUhf3dWoza6sDOgnI9yA1Y6aCVdTv4A.svg");
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    z-index: 99999999999999999999999;
+    width: 70px;
+    height: 70px;
+    position: relative;
+    left: 5px;
+
     top: 20px;
 }
 
 
+
+
+
 section #teambar li:nth-child(1) {
     color: red;
-    
+
 }
 
 section #teambar li:nth-child(4) {
     color: rgb(240, 117, 240);
-    
+
 }
 
 
@@ -94,7 +136,11 @@ section #teambar .score {
 section #teambar .score:nth-child(2) {
     color: red;
     position: relative;
+
     left: 90px;
+
+    left: 83px;
+
     top: 20px;
     width: 26px;
     height: 44px;
@@ -108,7 +154,11 @@ section #teambar .score:nth-child(2) {
 section #teambar .score:nth-child(3) {
     color: rgb(240, 117, 240);
     position: relative;
+
     right: 87px;
+
+    right: 81px;
+
     top: 20px;
     width: 26px;
     height: 44px;
@@ -118,7 +168,6 @@ section #teambar .score:nth-child(3) {
     background-color: #bbb;
     border-radius: 20%;
 
-    
 }
 
 
@@ -127,11 +176,11 @@ section #direction {
     /* border: 2px white solid; */
     width: 55%;
     margin: 0 auto;
-    
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    
+
 }
 
 section #direction li {
@@ -171,6 +220,18 @@ section #chance #t1chance li{
 
 }
 
+section #chance #t1chance li {
+    margin-left: 23px;
+    position: relative;
+    left: 103px;
+    bottom: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 80%;
+
+
+}
+
 section #chance #t2chance {
     display: flex;
     justify-content: center;
@@ -188,6 +249,19 @@ section #chance #t2chance li{
     bottom: 12px;
     text-align: center;
     
+    border-radius: 80%;
+
+}
+
+section #chance #t2chance li {
+    font-size: 1.5em;
+
+    margin-right: 23px;
+    position: relative;
+    right: 42px;
+    bottom: 10px;
+    text-align: center;
+
     border-radius: 80%;
 
 }
@@ -255,7 +329,11 @@ section #goalkeeper {
     left: 0;
     top: 0;
 
+
 } */
+
+}
+
 
 /* 키퍼이동 좌 */
 
@@ -265,7 +343,8 @@ section #goalkeeper {
 
 @keyframes left {
     0% {
-        right: 1%; transform: rotate(0deg);
+        right: 1%;
+        transform: rotate(0deg);
     }
 
     10% {
@@ -305,7 +384,9 @@ section #goalkeeper {
     }
 
     100% {
-        right: 11%; transform: rotate(-60deg);;
+        right: 11%;
+        transform: rotate(-60deg);
+        ;
     }
 }
 
@@ -337,7 +418,8 @@ section #goalkeeper {
 
 @keyframes right {
     0% {
-        left: 1%; transform: rotate(0deg);
+        left: 1%;
+        transform: rotate(0deg);
     }
 
     10% {
@@ -377,6 +459,7 @@ section #goalkeeper {
     }
 
     100% {
-        left: 11%; transform: rotate(60deg);
+        left: 11%;
+        transform: rotate(60deg);
     }
 }

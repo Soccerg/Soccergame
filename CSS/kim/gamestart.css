@@ -6,9 +6,20 @@ section {
     width: 80%;
     height: 100vh;
     margin: 0 auto;
+
     background-image: url('../kim/손배경.jpg');
     background-repeat: no-repeat;
     background-size: contain;
+
+
+    background-image: url('../../../CSS/kim/손배경.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    /* background-image: url('../kim/해안가.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+
     background-position: center;
 }
 
@@ -33,6 +44,7 @@ section .goalPost {
     background-size: cover;
     background-position: center;
     position: relative;
+
 } 
 
 /* 공 이미지 */
@@ -45,6 +57,11 @@ section #ball {
     background-position: center;
     background-size: cover;
     position:absolute;
+
+    right: 29%;
+    top: 10%;
+
+
     right: 29%;
     top: 10%;
     z-index: 999;
@@ -72,8 +89,50 @@ section #ball {
         top: 10%;
         left: 80%;
         transform:  rotate(1600deg) scale(2);
+
+
+    right: 32%;
+    top: 78%;
+
+    z-index: 999;
+    display: none;
+}
+
+.move {
+    animation: showUp2 1.5s 1 linear;
+    animation: move 2s 1 linear forwards;
+}
+
+@keyframes move {
+    0% {
+        top: 80%;
+        left: 5%;
+        transform: rotate(0) scale(0);
+    }
+
+    50%{    
+        top: 50%;
+        left: 50%;        
+        transform: rotate(800deg) scale(1);
+
+    70% {
+        right:30%;
+        transform: translate(-800px)    scale(1);
+
+    }
+
+    100% {
+        top: 10%;
+        left: 80%;
+        transform:  rotate(1600deg) scale(2);
     }
 }
+
+@keyframes showUp2 {
+    0% {
+        opacity: 0;
+        top: -50%;
+    }
 
 
 @keyframes showUp2 {
@@ -81,6 +140,7 @@ section #ball {
         opacity: 0;
         top: -50%;
     }
+
 
     50% {
         opacity: 0.5;
@@ -181,10 +241,22 @@ section #Player1 {
     width: 100px;
     height: 100px;
     position: absolute;
+
     top: 65%;
     left: 18%;
 
     background-image: url('../kim/래시포드.png');
+
+
+    top: 65%;
+    left: 18%;
+
+    top: 75%;
+    left: 27%;
+
+
+    background-image: url('../../../CSS/kim/레쉬포드.png');
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -251,7 +323,7 @@ section #Player2 {
     top: 75%;
     left: 20%;
 
-    background-image: url('../kim/손흥민.png');
+    background-image: url('../../../CSS/kim/손흥민.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -318,7 +390,11 @@ section #Player3 {
     top: 85%;
     left: 22%;
 
+
     background-image: url('../kim/아자르.png');
+
+    background-image: url('../../../CSS/kim/아자르.png');
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -401,7 +477,11 @@ section #Player3:hover::before {
     position: absolute;
     top: 10%;
     right: 15%;
+
     background-image: url('../../CSS/kim/ea스포츠.png');
+
+    background-image: url('../../../CSS/kim/EA.png');
+
     background-size: contain;
     background-position: cover;
     background-repeat: no-repeat;

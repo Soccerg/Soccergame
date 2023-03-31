@@ -500,7 +500,11 @@ section#Outer div#Player {
     width: 100px;
     height: 100px;
 
+
     background: url('../won/pic/God-normal.png') no-repeat;
+
+    background: url('../../CSS/won/pic/God-normal.png') no-repeat;
+
     background-size: 100%;
 
     border-radius: 50%;
@@ -797,6 +801,7 @@ section#Outer div#ShowBox {
         top: 30%;
         transform: translateX(-50%) rotate(720deg) scale(2);
     }
+
 } */
 div.ball-spot-direction-box div.main-box {
     background: yellow;
@@ -828,4 +833,6 @@ div.main-box a#main {
     font-weight: bold;
 
 
-}
+
+} */
+
